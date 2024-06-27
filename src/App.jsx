@@ -1,7 +1,9 @@
+import Header from "./assets/Pages/Header/Header";
+
 function App() {
   return (
     <>
-      <p>Hello world</p>
+      <Header />
     </>
   );
 }
