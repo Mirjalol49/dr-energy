@@ -1,0 +1,94 @@
+.hero-section {
+    background-color: hsl(198, 67%, 13%);
+    padding         : 20px 0 20px 0;
+}
+
+
+
+.hero-wrapper {
+    background-image : linear-gradient(to right, rgba(11, 41, 54, 0.773) 22%, rgba(11, 41, 54, .1) 80%), url(../../images/bg.webp);
+    background-repeat: no-repeat;
+    background-size  : cover;
+    width            : auto;
+    height           : 80vh;
+    border-radius    : 25px;
+    padding          : 50px;
+    color            : white;
+}
+
+
+.hero-span {
+    color      : #fff;
+    font-size  : 20px;
+    font-weight: 600;
+    margin-top : 50px;
+}
+
+.hero-title {
+    font-size: 60px;
+    width    : 100%;
+    max-width: 700px;
+    background-image: linear-gradient(90deg,
+            hsl(76deg 100% 50%) 0%,
+            hsl(78deg 100% 58%) 9%,
+            hsl(78deg 100% 62%) 16%,
+            hsl(78deg 100% 64%) 23%,
+            hsl(78deg 100% 67%) 28%,
+            hsl(78deg 100% 69%) 33%,
+            hsl(78deg 100% 72%) 38%,
+            hsl(77deg 100% 74%) 42%,
+            hsl(77deg 100% 76%) 46%,
+            hsl(77deg 100% 78%) 50%,
+            hsl(76deg 100% 80%) 53%,
+            hsl(76deg 100% 82%) 56%,
+            hsl(76deg 100% 83%) 60%,
+            hsl(75deg 100% 85%) 63%,
+            hsl(75deg 100% 87%) 66%,
+            hsl(75deg 100% 89%) 69%,
+            hsl(74deg 100% 91%) 72%,
+            hsl(74deg 100% 93%) 75%,
+            hsl(74deg 100% 95%) 78%,
+            hsl(73deg 100% 96%) 82%,
+            hsl(73deg 100% 98%) 87%,
+            hsl(0deg 0% 100%) 95%);
+    background-clip        : text;
+    -webkit-text-fill-color: transparent;
+    display                : block;
+    margin                 : 50px 0 0 0;
+}
+
+
+
+
+.hero-subtext {
+    font-size: 25px;
+}
+
+/* BUTTON */
+
+
+/* CSS */
+.hero-btn {
+    width           : 100%;
+    max-width       : 250px;
+    background-color: #4d6b71;
+    color           : #fff;
+    border          : none;
+    border-radius   : 20px;
+    margin-top      : 60px;
+    padding         : 15px;
+    cursor          : pointer;
+    font-weight     : 500;
+    font-size       : 25px;
+    transition      : 0.3s all;
+}
+
+.hero-btn:hover {
+    color    : #CEFC4F;
+    transform: scale(1.02);
+}
+
+.hero-btn:active {
+    color    : #CEFC4F;
+    transform: scale(0.99);
+}
