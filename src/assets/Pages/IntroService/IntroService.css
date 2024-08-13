@@ -1,0 +1,17 @@
+.intro-service__wrapper {
+    display        : flex;
+    justify-content: center;
+    padding        : 50px 0;
+}
+
+.intro-service__title {
+    font-size   : 40px;
+    width       : 100%;
+    max-width   : 830px;
+    text-align  : center;
+    line-height : 1.5;
+    word-spacing: 3px;
+    color       : #0B2936;
+
+
+}
