@@ -1,12 +1,14 @@
 import React from "react";
 import Hero from "../Hero/Hero";
-import IntroService from "../IntroService/IntroService";
+import Brands from "./Brands/Brands";
+import Services from "../Servicest/Services";
 
 const Main = () => {
   return (
     <main>
       <Hero />
-      <IntroService />
+      <Brands />
+      <Services />
     </main>
   );
 };

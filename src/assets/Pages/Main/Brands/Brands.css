@@ -1,0 +1,16 @@
+.brands-section {
+  padding: 50px 0 10px 0; /* Remove extra padding */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.marquee-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Consistent spacing between images */
+}
+
+.brands-img {
+  margin: 0 30px 0 30px; /* Remove any default margin */
+  width: 200px; /* Ensure consistent image size */
+  height: auto;
+}
