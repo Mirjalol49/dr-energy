@@ -14,7 +14,7 @@ const Footer = () => {
                             <img src={logo} alt="Doctor Energy Logo" />
                         </div>
                         <p>Empowering homes and businesses with innovative energy solutions for a sustainable future.</p>
-                        <div className="social-links">
+                        {/* <div className="social-links">
                             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-linkedin"></i>
                             </a>
@@ -24,7 +24,7 @@ const Footer = () => {
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-facebook"></i>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="footer-section">
@@ -45,8 +45,8 @@ const Footer = () => {
                                 123 Energy Street, City, Country
                             </li>
                             <li>
-                                <a href="tel:++998909177144" className="fas fa-phone"></a>
-                                +998909177144
+                                <a href="tel:+998909177144" className="fas fa-phone"></a>
+                                +998 90 917 71 44
                             </li>
                             <li>
                                 <i className="fas fa-envelope"></i>
@@ -59,16 +59,16 @@ const Footer = () => {
                         <h4>Business Hours</h4>
                         <ul className="business-hours">
                             <li>
-                                <span>Monday - Friday:</span>
+                                <span>Monday - Friday</span>
                                 <span>9:00 AM - 6:00 PM</span>
                             </li>
                             <li>
                                 <span>Saturday:</span>
                                 <span>10:00 AM - 4:00 PM</span>
                             </li>
-                            <li>
+                            <li className='footer-li'>
                                 <span>Sunday:</span>
-                                <span>Closed</span>
+                                <span className='footer-span'>Closed</span>
                             </li>
                         </ul>
                     </div>

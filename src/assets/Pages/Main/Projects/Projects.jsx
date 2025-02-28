@@ -56,7 +56,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className='projects-section' ref={sectionRef}>
+    <section className='projects-section' ref={sectionRef} id='projects'>
       <div className="container">
         <h2 className='project-title'>Featured Projects</h2>
         <div className="projects-wrapper">

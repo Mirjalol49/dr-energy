@@ -46,7 +46,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="contact-section" ref={sectionRef}>
+        <section className="contact-section" ref={sectionRef} id='contact'>
             <div className="container">
                 <h2 className="contact-title">Get in Touch</h2>
                 <div className="contact-wrapper">

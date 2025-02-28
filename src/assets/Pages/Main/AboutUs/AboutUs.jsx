@@ -49,7 +49,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section className='about-us-section' ref={sectionRef}>
+    <section className='about-us-section' ref={sectionRef} id='about'>
       <div className="container">
         <h3 className='about-us-title'>At Electrician, we pride ourselves on our unwavering commitment to quality. With a team of highly trained and certified electricians, we are dedicated to delivering top-notch electrical solutions for both residential and commercial clients.</h3>
         <div className="about-us-wrapper">

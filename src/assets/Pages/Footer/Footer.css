@@ -114,7 +114,9 @@
 .footer-section ul li {
     margin-bottom: 1rem;
 }
-
+.footer-span {
+    color: hsl(76deg 97% 65%);
+}
 .footer-section ul li a {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
@@ -143,7 +145,13 @@
     left: 0;
 }
 
+.contact-info  {
+    background-color: hsl(198, 67%, 13%);
+    border: none;
+}
+
 .contact-info li {
+   
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -165,6 +173,9 @@
     font-size: 1.2rem;
 }
 
+
+
+
 .business-hours li {
     display: flex;
     justify-content: space-between;
@@ -174,9 +185,17 @@
     border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
+.business-hours li:first-child {
+    display: flex;
+   flex-direction: column;
+}
 .business-hours li:last-child {
     border-bottom: none;
+   
+    
 }
+
+
 
 .footer-bottom {
     padding-top: 2rem;
@@ -260,6 +279,7 @@
     .footer-content {
         grid-template-columns: 1fr;
         gap: 3rem;
+        margin: 0;
     }
 
     .footer-section {
@@ -287,11 +307,24 @@
         justify-content: center;
     }
 
+    .business-hours {
+        padding: 0;
+    }
+
+
+
     .business-hours li {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         text-align: center;
         gap: 0.5rem;
+        width: 100%; /* Ensure full width */
+        display: flex;
+        justify-content: center; /* Align text in center */
+      }
+
+    .footer-li {
+       display: none;
     }
 
     .footer-bottom {

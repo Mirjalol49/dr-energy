@@ -1,0 +1,24 @@
+.hero {
+    /* existing styles... */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.hero img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row; /* Align items in a row on larger screens */
+        justify-content: space-between; /* Space out items */
+    }
+    
+    .hero img {
+        width: 50%; /* Set a specific width for images on larger screens */
+    }
+} 

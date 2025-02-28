@@ -29,14 +29,14 @@ const Header = () => {
     { href: "#services", text: "Services" },
     { href: "#about", text: "About us" },
     { href: "#projects", text: "Projects" },
-    { href: "#testimonials", text: "Testimonials" }
+    { href: "#faq", text: "FAQ" }
   ];
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="header-wrapper">
-          <a href="/" className="logo-link">
+          <a href="https://www.enercon.uz/" className="logo-link">
             <img src={Logo} width={250} height={150} alt="Dr Energy Logo" />
           </a>
           <button 
@@ -56,9 +56,9 @@ const Header = () => {
                 </li>
               ))}
               <li className="nav-item" style={{"--item-index": menuItems.length}}>
-                <button className="nav-item_btn" onClick={closeMenu}>
+                <a className="nav-item_btn" href="#contact" onClick={closeMenu}>
                   Contact us
-                </button>
+                </a>
               </li>
             </ul>
           </nav>

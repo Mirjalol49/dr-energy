@@ -7,7 +7,7 @@ const FAQItem = ({ question, answer }) => {
   const answerRef = useRef(null);
 
   return (
-    <div className="faq-item">
+    <div className="faq-item" id='faq'>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="faq-question"
