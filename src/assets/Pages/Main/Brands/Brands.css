@@ -1,16 +1,127 @@
 .brands-section {
-  padding: 50px 0 10px 0; /* Remove extra padding */
-  overflow: hidden; /* Prevent overflow */
+  padding: 80px 0;
+  overflow: hidden;
+  background-color: hsl(198, 67%, 13%);
+  position: relative;
+}
+
+.brands-section::before,
+.brands-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brands-section::before {
+  left: 0;
+  background: linear-gradient(to right, 
+    hsl(198, 67%, 13%) 0%,
+    hsla(198, 67%, 13%, 0.95) 35%,
+    transparent 100%
+  );
+}
+
+.brands-section::after {
+  right: 0;
+  background: linear-gradient(to left, 
+    hsl(198, 67%, 13%) 0%,
+    hsla(198, 67%, 13%, 0.95) 35%,
+    transparent 100%
+  );
 }
 
 .marquee-container {
   display: flex;
   align-items: center;
-  gap: 20px; /* Consistent spacing between images */
+  gap: 100px;
+  padding: 20px 0;
 }
 
 .brands-img {
-  margin: 0 30px 0 30px; /* Remove any default margin */
-  width: 200px; /* Ensure consistent image size */
+  width: 180px;
   height: auto;
+  opacity: 0.8;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0) invert(1);
+  user-select: none;
+  will-change: transform, opacity;
+}
+
+.brands-img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1440px) {
+  .brands-section::before,
+  .brands-section::after {
+    width: 250px;
+  }
+
+  .marquee-container {
+    gap: 90px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .brands-section {
+    padding: 60px 0;
+  }
+
+  .brands-section::before,
+  .brands-section::after {
+    width: 200px;
+  }
+
+  .brands-img {
+    width: 160px;
+  }
+
+  .marquee-container {
+    gap: 80px;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-section {
+    padding: 50px 0;
+  }
+
+  .brands-section::before,
+  .brands-section::after {
+    width: 150px;
+  }
+
+  .brands-img {
+    width: 140px;
+  }
+
+  .marquee-container {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-section {
+    padding: 40px 0;
+  }
+
+  .brands-section::before,
+  .brands-section::after {
+    width: 100px;
+  }
+
+  .brands-img {
+    width: 120px;
+  }
+
+  .marquee-container {
+    gap: 50px;
+    padding: 10px 0;
+  }
 }
