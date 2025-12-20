@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import Logo from "../../images/drenergy_logo.png";
+import Logo from "../../images/logo_winter.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,8 +39,8 @@ const Header = () => {
           <a href="https://www.enercon.uz/" className="logo-link">
             <img src={Logo} width={250} height={150} alt="Dr Energy Logo" />
           </a>
-          <button 
-            className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`} 
+          <button
+            className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -49,13 +49,13 @@ const Header = () => {
           <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
             <ul className="nav-list">
               {menuItems.map((item, index) => (
-                <li key={item.href} className="nav-item" style={{"--item-index": index}}>
+                <li key={item.href} className="nav-item" style={{ "--item-index": index }}>
                   <a className="nav-item_link" href={item.href} onClick={closeMenu}>
                     {item.text}
                   </a>
                 </li>
               ))}
-              <li className="nav-item" style={{"--item-index": menuItems.length}}>
+              <li className="nav-item" style={{ "--item-index": menuItems.length }}>
                 <a className="nav-item_btn" href="#contact" onClick={closeMenu}>
                   Contact us
                 </a>
