@@ -1,0 +1,769 @@
+/* =========================================
+   ACCESSIBLE LIGHT MODE PRESENTATION
+   Theme: High Contrast, Simple, Big
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --access-bg: #ffffff;
+    --access-text: #1a1a1a;
+    /* Sharper Black */
+    --access-text-dim: #666666;
+    --access-primary: #003366;
+    /* Architectural Deep Blue */
+    --access-border: 1px solid #000;
+    /* Sharp, thin black border */
+    --access-card-bg: #ffffff;
+    --font-access: 'Inter', Helvetica, Arial, sans-serif;
+    --arch-grid: radial-gradient(#ccc 1px, transparent 1px);
+    --arch-grid-size: 20px 20px;
+}
+
+/* =========================================
+   GLOBAL ARCHITECTURE RESET
+   ========================================= */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Grid Background */
+.presentation-modal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--arch-grid);
+    background-size: var(--arch-grid-size);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Base Modal Reset */
+.presentation-modal {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--access-bg);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden !important;
+    /* STRICT NO SCROLL */
+    font-family: var(--font-access);
+    color: var(--access-text);
+}
+
+.presentation-modal *,
+.presentation-modal *:before,
+.presentation-modal *:after {
+    box-sizing: inherit;
+}
+
+/* =========================================
+   BIG & OBVIOUS NAVIGATION
+   ========================================= */
+
+/* Top Bar: Slide Number & Close */
+.presentation-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    /* Reduced from 80px */
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #000;
+    z-index: 1000;
+    background: #fff;
+}
+
+
+
+.slide-counter {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--access-text-dim);
+    letter-spacing: 1px;
+}
+
+.btn-close-access {
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 0;
+    /* Sharp */
+    color: #000;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+    box-shadow: none;
+    /* Flat */
+}
+
+.btn-close-access:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Bottom Nav Bar */
+.presentation-bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    /* Reduced from 90px */
+    background: #fff;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+}
+
+.btn-nav-access {
+    background: #000;
+    /* Brutalist Black */
+    color: #fff;
+    border: 1px solid #000;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0;
+    /* Sharp corner */
+    letter-spacing: 2px;
+    /* Wide tracking */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    transition: background 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-nav-access:hover {
+    background: #004494;
+    transform: translateY(-2px);
+}
+
+.btn-nav-access:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* =========================================
+   MAIN SLIDE AREA
+   ========================================= */
+
+.slide-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    /* Match Top Bar */
+    padding-bottom: 70px;
+    /* Match Bottom Nav */
+    display: flex;
+    align-items: flex-start;
+    /* Changed from center to prevent top clipping */
+    justify-content: center;
+    background: transparent;
+    /* Let grid show */
+}
+
+.access-slide-wrapper {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    padding: 0;
+    /* Remove padding for edge-to-edge feel */
+    border: 1px solid #000;
+    /* Define the slide area */
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+    /* Architectural offset shadow */
+    max-width: 95%;
+    /* Keep grid visible on sides */
+    max-height: 90%;
+    margin-top: 2%;
+}
+
+/* =========================================
+   SLIDE 1: HERO (Clear & Readable)
+   ========================================= */
+.access-hero {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    border: none;
+}
+
+.access-hero-img-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    /* Very subtle so text pops */
+}
+
+.access-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.access-hero-title {
+    font-size: clamp(3rem, 6vw, 6rem);
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    /* Tight/Modern */
+    text-transform: uppercase;
+}
+
+.access-hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 500;
+    background: #f0f0f0;
+    padding: 8px 16px;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* =========================================
+   SLIDE 2-4: SPLIT / PAGINATION
+   ========================================= */
+.access-split {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.access-split-img {
+    flex: 0 0 50%;
+    /* Equal split */
+    border-right: 1px solid #000;
+}
+
+.access-split-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.access-split-content {
+    flex: 1;
+    padding: 15px;
+    /* Reduced from 20px */
+    display: flex;
+    flex-direction: column;
+}
+
+.access-title {
+    font-size: 2rem;
+    /* Aggressively reduced to fit full content */
+    color: #000;
+    /* Enforce dark color */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    padding-bottom: 5px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    /* CRITICAL: Prevent flexbox from hiding this */
+}
+
+.access-subtitle {
+    color: #888;
+    margin-bottom: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    /* CRITICAL: Prevent shrinking */
+}
+
+/* CENTERED GRID LAYOUT */
+.access-centered-grid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 1px solid #000;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+}
+
+.access-centered-header {
+    text-align: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.services-text-grid.full-width-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 Columns but wider */
+    gap: 40px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* BIG CENTERED TITLE LAYOUT */
+.access-centered-title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: var(--access-border);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.access-big-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    max-width: 900px;
+}
+
+.access-big-subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #666;
+    margin-top: 20px;
+    max-width: 800px;
+}
+
+/* Maximized Text Paginator */
+/* Maximized Text Paginator */
+.access-paginator {
+    flex: 1;
+    height: 100%;
+    /* Ensure it spans full height */
+    position: relative;
+    position: relative;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 0;
+    padding: 30px;
+    /* Reduced from 30px */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.access-text-block {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: hidden;
+    /* NO SCROLL - PAGINATED */
+}
+
+.access-pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Spreads buttons apart */
+    margin-top: auto;
+    /* Pushes to bottom if flex container allows */
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.btn-page-access {
+    background: #fff;
+    border: 2px solid var(--access-primary);
+    color: var(--access-primary);
+    padding: 10px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-page-access:hover:not(:disabled) {
+    background: var(--access-primary);
+    color: #fff;
+}
+
+.btn-page-access:disabled {
+    border-color: #ccc;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   SLIDE 5-6: GRIDS (Services/Projects)
+   ========================================= */
+.access-grid-container {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+}
+
+.access-grid-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.access-cards-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    height: calc(100% - 100px);
+}
+
+.access-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.access-card:hover {
+    border-color: #000;
+    box-shadow: none;
+    border-left-width: 5px;
+    /* Technical indicator on hover */
+    background: #fafafa;
+}
+
+.access-card h3 {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.access-card p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.access-btn-details {
+    margin-top: 15px;
+    color: var(--access-primary);
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+/* Overlay for Details */
+.access-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.access-overlay-card {
+    background: #fff;
+    border: 3px solid var(--access-primary);
+    padding: 60px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    position: relative;
+}
+
+.access-overlay-title {
+    font-size: 2.5rem;
+    color: var(--access-primary);
+    margin-bottom: 30px;
+}
+
+.access-overlay-body {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #222;
+}
+
+.btn-close-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-close-overlay:hover {
+    background: #000;
+}
+
+/* =========================================
+   SLIDE 4: SERVICES SPLIT GRID
+   ========================================= */
+.services-text-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    flex: 1;
+    overflow-y: hidden;
+    /* HIDE SCROLLBAR - content must fit */
+    padding-right: 5px;
+    margin-top: 10px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.service-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.service-item p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #555;
+    margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE (Mobile Stack)
+   ========================================= */
+@media (max-width: 1024px) {
+    .access-split {
+        flex-direction: column;
+    }
+
+    .access-split-img {
+        display: none;
+        /* Hide image on smaller screens to prioritize text size */
+    }
+
+    .access-cards-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        display: block;
+        overflow-y: auto;
+        padding-bottom: 50px;
+    }
+
+    .access-card {
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .access-text-block {
+        font-size: 1.1rem;
+    }
+
+    .services-text-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* =========================================
+   BRANDS GALLERY LAYOUT (Solar Project)
+   ========================================= */
+.access-brands-gallery {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #f5f5f5;
+    /* Light Technical Grey */
+    border: 1px solid #ddd;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.brands-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+    /* Removed bottom margin */
+}
+
+.brand-box {
+    background: #fff;
+    padding: 5px 10px;
+    /* Increased padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    /* Restored size for visibility since vertical space is available */
+}
+
+.brand-box.masdar {
+    background: #fff;
+    /* Clean white background */
+    width: 280px;
+    /* Increased for better visibility */
+    border: 1px solid #eee;
+    /* Subtle border for definition */
+}
+
+.brand-box.dec {
+    width: 180px;
+    /* Increased from 130px */
+}
+
+.brand-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.brands-content-layout {
+    display: flex;
+    margin-top: 5px;
+    /* Small top margin */
+    flex: 1;
+    min-height: 0;
+}
+
+.brands-grid {
+    flex: 1;
+    /* Full width */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    /* Force rows to shrink */
+    gap: 8px;
+    padding: 0;
+    min-height: 0;
+    /* Ensure grid shrinks to fit */
+}
+
+
+.brand-gallery-item {
+    background: transparent;
+    /* Removed dark background */
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: zoom-in;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: 100%;
+    /* Reverted to full width */
+    height: 100%;
+    /* Reverted to full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Changed to cover per user request */
+}
+
+.brands-hero-image {
+    display: none;
+    /* Hidden as merged into grid */
+}
+
+.brands-hero-image img {
+    display: none;
+}
+
+.zoom-hint {
+    display: none;
+
+    font-size: 0.8rem;
+    pointer-events: none;
+}

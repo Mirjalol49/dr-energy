@@ -4,6 +4,7 @@ import Brands from "./Brands/Brands";
 import Services from "./Servicest/Services";
 import AboutUs from "./AboutUs/AboutUs";
 import Projects from "./Projects/Projects";
+import Presentation from "./Presentation/Presentation";
 import Faq from "./Faqs/Faq";
 import Contact from "./Contact/Contact";
 const Main = () => {
@@ -12,10 +13,11 @@ const Main = () => {
       <Hero />
       {/* <Brands /> */}
       <Services />
-      <AboutUs/>
-      <Projects/>
-      <Faq/>
-      <Contact/>
+      <AboutUs />
+      <Projects />
+      <Presentation />
+      <Faq />
+      <Contact />
     </main>
   );
 };

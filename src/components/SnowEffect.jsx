@@ -14,7 +14,7 @@ const SnowEffect = memo(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d', { 
+    const ctx = canvas.getContext('2d', {
       alpha: true,
       desynchronized: true // Performance optimization for animations
     });
@@ -29,7 +29,7 @@ const SnowEffect = memo(() => {
       canvas.style.height = `${window.innerHeight}px`;
       ctx.scale(dpr, dpr);
     };
-    
+
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
@@ -147,7 +147,7 @@ const SnowEffect = memo(() => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-[9999]"
+      className="fixed inset-0 pointer-events-none z-10"
       aria-hidden="true"
       role="presentation"
     />

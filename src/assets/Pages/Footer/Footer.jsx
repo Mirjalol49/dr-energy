@@ -2,8 +2,11 @@ import React from 'react';
 import './Footer.css';
 import logo from '../../images/logo_winter.png';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const { t } = useLanguage();
 
     return (
         <footer className="footer">
@@ -13,36 +16,25 @@ const Footer = () => {
                         <div className="footer-logo">
                             <img src={logo} alt="Doctor Energy Logo" />
                         </div>
-                        <p>Empowering homes and businesses with innovative energy solutions for a sustainable future.</p>
-                        {/* <div className="social-links">
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-facebook"></i>
-                            </a>
-                        </div> */}
+                        <p>{t('footer.description')}</p>
                     </div>
 
                     <div className="footer-section">
-                        <h4>Quick Links</h4>
+                        <h4>{t('footer.quickLinks')}</h4>
                         <ul>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#about">{t('nav.about')}</a></li>
+                            <li><a href="#services">{t('nav.services')}</a></li>
+                            <li><a href="#projects">{t('nav.projects')}</a></li>
+                            <li><a href="#contact">{t('nav.contact')}</a></li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
-                        <h4>Contact Info</h4>
+                        <h4>{t('footer.contactInfo')}</h4>
                         <ul className="contact-info">
                             <li>
                                 <i className="fas fa-map-marker-alt"></i>
-                                123 Energy Street, City, Country
+                                {t('footer.addr')}
                             </li>
                             <li>
                                 <a href="tel:+998909177144" className="fas fa-phone"></a>
@@ -56,19 +48,19 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-section">
-                        <h4>Business Hours</h4>
+                        <h4>{t('footer.businessHours')}</h4>
                         <ul className="business-hours">
                             <li>
-                                <span>Monday - Friday</span>
+                                <span>{t('footer.monFri')}</span>
                                 <span>9:00 AM - 6:00 PM</span>
                             </li>
                             <li>
-                                <span>Saturday:</span>
+                                <span>{t('footer.sat')}</span>
                                 <span>10:00 AM - 4:00 PM</span>
                             </li>
                             <li className='footer-li'>
-                                <span>Sunday:</span>
-                                <span className='footer-span'>Closed</span>
+                                <span>{t('footer.sun')}</span>
+                                <span className='footer-span'>{t('footer.closed')}</span>
                             </li>
                         </ul>
                     </div>
@@ -76,11 +68,11 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <div className="copyright">
-                        © {currentYear} Dr Energy. All rights reserved.
+                        © {currentYear} Dr Energy. {t('footer.rights')}
                     </div>
                     <div className="footer-links">
-                        <a href="/privacy">Privacy Policy</a>
-                        <a href="/terms">Terms of Service</a>
+                        <a href="/privacy">{t('footer.privacy')}</a>
+                        <a href="/terms">{t('footer.terms')}</a>
                     </div>
                 </div>
             </div>

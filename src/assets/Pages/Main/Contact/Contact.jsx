@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Contact.css';
+import { useLanguage } from '../../../../context/LanguageContext';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const Contact = () => {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const sectionRef = useRef(null);
+    const { t } = useLanguage();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -48,11 +50,11 @@ const Contact = () => {
     return (
         <section className="contact-section" ref={sectionRef} id='contact'>
             <div className="container">
-                <h2 className="contact-title">Get in Touch</h2>
+                <h2 className="contact-title">{t('contact.title')}</h2>
                 <div className="contact-wrapper">
                     <div className="contact-info">
-                        <h3>Let&apos;s Connect</h3>
-                        <p>Have a question or want to discuss a project? Send us a message and we&apos;ll get back to you as soon as possible.</p>
+                        <h3>{t('contact.connect')}</h3>
+                        <p>{t('contact.desc')}</p>
                         <div className="contact-details">
                             <div className="contact-detail-item">
                                 <i className="fas fa-envelope"></i>
@@ -66,34 +68,34 @@ const Contact = () => {
                     </div>
                     <form className="contact-form" onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="email">Email</label>
+                            <label htmlFor="email">{t('contact.email')}</label>
                             <input
                                 type="email"
                                 id="email"
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                placeholder="Enter your email"
+                                placeholder={t('contact.emailPh')}
                                 required
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="message">Message</label>
+                            <label htmlFor="message">{t('contact.message')}</label>
                             <textarea
                                 id="message"
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                placeholder="Type your message here"
+                                placeholder={t('contact.messagePh')}
                                 required
                             />
                         </div>
-                        <button 
-                            type="submit" 
+                        <button
+                            type="submit"
                             className={`submit-button ${isSubmitting ? 'submitting' : ''}`}
                             disabled={isSubmitting}
                         >
-                            {isSubmitting ? 'Sending...' : 'Send Message'}
+                            {isSubmitting ? t('contact.sending') : t('contact.send')}
                         </button>
                     </form>
                 </div>

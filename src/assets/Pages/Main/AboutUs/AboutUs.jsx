@@ -1,48 +1,29 @@
 import React, { useEffect, useRef } from 'react';
 import "./AboutUs.css"
+import { useLanguage } from '../../../../context/LanguageContext';
 
 const AboutUs = () => {
   const sectionRef = useRef(null);
-  const itemRefs = useRef([]);
-
-  const animateNumber = (element, start, end, duration) => {
-    let startTimestamp = null;
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      const current = Math.floor(progress * (end - start) + start);
-      element.textContent = `${current}+`;
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
-    };
-    window.requestAnimationFrame(step);
-  };
+  const { t } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const items = entry.target.querySelectorAll('.about-us-item');
-            items.forEach((item, index) => {
-              setTimeout(() => {
-                item.classList.add('animate');
-                const numberElement = item.querySelector('h3');
-                animateNumber(numberElement, 0, 90, 2000);
-              }, index * 200);
-            });
+            entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.3,
+        threshold: 0.2,
       }
     );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+      const elements = sectionRef.current.querySelectorAll('.fade-in');
+      elements.forEach((el) => observer.observe(el));
     }
 
     return () => observer.disconnect();
@@ -51,19 +32,38 @@ const AboutUs = () => {
   return (
     <section className='about-us-section' ref={sectionRef} id='about'>
       <div className="container">
-        <h3 className='about-us-title'>At Electrician, we pride ourselves on our unwavering commitment to quality. With a team of highly trained and certified electricians, we are dedicated to delivering top-notch electrical solutions for both residential and commercial clients.</h3>
-        <div className="about-us-wrapper">
-          <div className='about-us-item'>
-            <h3>0+</h3>
-            <p>Years of Experience</p>
+        <div className="about-us-header fade-in">
+          <h2 className='about-us-main-title'>DOCTOR ENERGY</h2>
+          <div className="about-us-subtitle-box">
+            <span className="about-us-year">2009</span>
+            <div className="about-us-divider"></div>
+            <p className="about-us-subtitle">{t('aboutUs.subtitle')}</p>
           </div>
-          <div className='about-us-item'>
-            <h3>0+</h3>
-            <p>Projects Completed</p>
-          </div>
-          <div className='about-us-item'>
-            <h3>0+</h3>
-            <p>Client Satisfaction</p>
+        </div>
+
+        <div className="about-us-content fade-in">
+          <p className="about-us-description">
+            {t('aboutUs.description')}
+          </p>
+        </div>
+
+        <div className="about-us-projects fade-in">
+          <h3 className="projects-title">{t('aboutUs.projectsTitle')}</h3>
+          <p className="projects-intro">{t('aboutUs.projectsIntro')}</p>
+
+          <div className="projects-grid">
+            <div className="project-card">
+              <div className="project-number">160</div>
+              <p className="project-location">{t('aboutUs.project1')}</p>
+            </div>
+            <div className="project-card">
+              <div className="project-number">222</div>
+              <p className="project-location">{t('aboutUs.project2')}</p>
+            </div>
+            <div className="project-card">
+              <div className="project-number">116</div>
+              <p className="project-location">{t('aboutUs.project3')}</p>
+            </div>
           </div>
         </div>
       </div>
