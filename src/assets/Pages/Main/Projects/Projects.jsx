@@ -44,9 +44,24 @@ const Projects = () => {
     return () => observer.disconnect();
   }, []);
 
+  /* 
+    MAPPING PROJECTS TO PRESENTATION SLIDES:
+    1. Tashkent City Mall -> Slide 29
+    2. Solar Jizzakh -> Slide 19
+    3. Dangara -> Slide 13
+    4. Asaka Bank -> Slide 36 (Media Facade)
+    5. Margilan -> Slide 11
+    6. 116 -> Slide 9
+    7. Solar Samarkand -> Slide 24
+    8. Soho -> Slide 33
+    9. Aloqa Bank -> Slide 38
+    10. PSB Bank -> Slide 39
+  */
+
   const projects = [
     {
       id: 1,
+      slideId: 29,
       title: t('projects.items.1.title'),
       description: t('projects.items.1.desc'),
       image: mallImg,
@@ -54,6 +69,7 @@ const Projects = () => {
     },
     {
       id: 2,
+      slideId: 19,
       title: t('projects.items.2.title'),
       description: t('projects.items.2.desc'),
       image: solarImg,
@@ -61,6 +77,7 @@ const Projects = () => {
     },
     {
       id: 3,
+      slideId: 14, // Fixed: Dangara is Slide 14
       title: t('projects.items.3.title'),
       description: t('projects.items.3.desc'),
       image: dangaraImg,
@@ -68,6 +85,7 @@ const Projects = () => {
     },
     {
       id: 4,
+      slideId: 36,
       title: t('projects.items.4.title'),
       description: t('projects.items.4.desc'),
       image: asakaBackup,
@@ -75,6 +93,7 @@ const Projects = () => {
     },
     {
       id: 5,
+      slideId: 12, // Fixed: Margilan is Slide 12
       title: t('projects.items.5.title'),
       description: t('projects.items.5.desc'),
       image: margilanImg,
@@ -82,10 +101,70 @@ const Projects = () => {
     },
     {
       id: 6,
+      slideId: 7, // Fixed: 116 is Slide 7
       title: t('projects.items.6.title'),
       description: t('projects.items.6.desc'),
       image: project116Img,
-      gallery: projectsData[6].gallery
+      gallery: projectsData[6].gallery,
+      documents: projectsData[6].documents
+    },
+    {
+      id: 7,
+      slideId: 24,
+      title: t('projects.items.7.title'),
+      description: t('projects.items.7.desc'),
+      image: projectsData[7].gallery[0],
+      gallery: projectsData[7].gallery
+    },
+    {
+      id: 8,
+      slideId: 33,
+      title: t('projects.items.8.title'),
+      description: t('projects.items.8.desc'),
+      image: projectsData[8].gallery[0],
+      gallery: projectsData[8].gallery
+    },
+    {
+      id: 9,
+      slideId: 38,
+      title: t('projects.items.9.title'),
+      description: t('projects.items.9.desc'),
+      image: projectsData[9].gallery[0],
+      gallery: projectsData[9].gallery
+    },
+    {
+      id: 10,
+      slideId: 39,
+      title: t('projects.items.10.title'),
+      description: t('projects.items.10.desc'),
+      image: projectsData[10].gallery[0],
+      gallery: projectsData[10].gallery
+    },
+    {
+      id: 11,
+      slideId: 16, // Asaka GRS
+      title: t('projects.items.11.title'),
+      description: t('projects.items.11.desc'),
+      image: projectsData[11].gallery[0],
+      gallery: projectsData[11].gallery
+    },
+    {
+      id: 12,
+      slideId: 8, // Residential 160
+      title: t('projects.items.12.title'),
+      description: t('projects.items.12.desc'),
+      image: projectsData[12].gallery[0],
+      gallery: projectsData[12].gallery,
+      documents: projectsData[12].documents
+    },
+    {
+      id: 13,
+      slideId: 9, // Residential 222
+      title: t('projects.items.13.title'),
+      description: t('projects.items.13.desc'),
+      image: projectsData[13].gallery[0],
+      gallery: projectsData[13].gallery,
+      documents: projectsData[13].documents
     }
   ];
 

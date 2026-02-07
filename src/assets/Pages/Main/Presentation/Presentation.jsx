@@ -253,9 +253,9 @@ const ContentPaginator = ({ content, page, direction }) => {
 /* 
  * 2. Main Presentation Component
  */
-const Presentation = () => {
+const Presentation = ({ standalone = false }) => {
     const { t } = useLanguage();
-    const [isFullscreen, setIsFullscreen] = useState(false);
+    const [isFullscreen, setIsFullscreen] = useState(standalone);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [internalPage, setInternalPage] = useState(0); // Lifted State
     const [direction, setDirection] = useState(0);
@@ -406,6 +406,10 @@ const Presentation = () => {
     };
 
     const closePresentation = () => {
+        if (standalone) {
+            window.location.href = '/';
+            return;
+        }
         setIsFullscreen(false);
         setCurrentSlide(0);
         setInternalPage(0);
@@ -548,7 +552,7 @@ const Presentation = () => {
                                 display: 'inline-block',
                                 marginBottom: '40px'
                             }}>
-                                Engineering The Future Since 2009
+                                {t('presentation.entry.tagline')}
                             </p>
 
                             <div>
@@ -567,7 +571,7 @@ const Presentation = () => {
                                     gap: '10px',
                                     margin: '0 auto'
                                 }}>
-                                    <FaPlay size={14} /> Open Presentation
+                                    <FaPlay size={14} /> {t('presentation.entry.openBtn')}
                                 </button>
                             </div>
                         </div>
@@ -583,7 +587,7 @@ const Presentation = () => {
                             zIndex: 2,
                             letterSpacing: '1px'
                         }}>
-                            INTERACTIVE PORTFOLIO v2.0
+                            {t('presentation.entry.portfolioLabel')}
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 import "./Header.css";
-import Logo from "../../images/logo_winter.png";
+import Logo from "../../images/drenergy_logo.png";
 import { useLanguage } from "../../../context/LanguageContext";
 import { ChevronDown } from "lucide-react";
 

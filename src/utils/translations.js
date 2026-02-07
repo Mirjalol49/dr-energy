@@ -84,6 +84,34 @@ export const translations = {
                 6: {
                     title: "Жилой Комплекс №116",
                     desc: "Полный цикл электромонтажных работ для современного жилого здания."
+                },
+                7: {
+                    title: "ФЭС Самарканд",
+                    desc: "Строительство солнечной фотоэлектрической станции."
+                },
+                8: {
+                    title: "SOHO Residence",
+                    desc: "Электромонтажные работы для жилого комплекса премиум-класса."
+                },
+                9: {
+                    title: "Aloqa Bank",
+                    desc: "Модернизация систем электроснабжения и освещения."
+                },
+                10: {
+                    title: "PSB Bank",
+                    desc: "Инсталляция мультимедийных систем и освещения."
+                },
+                11: {
+                    title: "ГРС Асака",
+                    desc: "Строительство и оснащение газораспределительной станции."
+                },
+                12: {
+                    title: "Жилой Комплекс №160",
+                    desc: "Строительство современного жилого дома в Намангане."
+                },
+                13: {
+                    title: "Жилой Комплекс №222",
+                    desc: "Полный цикл строительства и инженерного оснащения."
                 }
             }
         },
@@ -115,6 +143,11 @@ export const translations = {
         presentation: {
             title: "Наша презентация",
             viewPresentation: "Смотреть презентацию",
+            entry: {
+                tagline: "Строим будущее с 2009 года",
+                openBtn: "Открыть презентацию",
+                portfolioLabel: "ИНТЕРАКТИВНОЕ ПОРТФОЛИО v2.0"
+            },
             slides: {
                 1: {
                     title: "Doctor Energy",
@@ -276,8 +309,16 @@ export const translations = {
                     style: "project-gallery",
                     customerLabel: "Заказчик:",
                     customerValue: "АО «Узтрансгаз»",
+                    locationValue: "Маргилан, Ферганская область",
+                    roleValue: "Генеральный подрядчик (EPC)",
                     worksLabel: "Работы:",
-                    worksValue: "Реализация проекта по строительству и оснащению газораспределительной станции. Выполнен монтаж узлов редуцирования, систем одоризации и трубопроводной обвязки для обеспечения надежного газоснабжения."
+                    worksValue: "Реализация проекта по строительству и оснащению газораспределительной станции.",
+                    content: [
+                        { title: "Объем работ", desc: "Строительство «под ключ», включая фундамент, монтаж оборудования и благоустройство." },
+                        { title: "Оборудование", desc: "Монтаж узлов редуцирования давления газа высокой производительности." },
+                        { title: "Системы одоризации", desc: "Установка современных систем одоризации для обеспечения безопасности газоснабжения." },
+                        { title: "Инженерия", desc: "Полная трубопроводная обвязка и интеграция в существующую магистральную сеть." }
+                    ]
                 },
                 13: {
                     title: "ГАЗОРАСПРЕДЕЛИТЕЛЬНАЯ СТАНЦИЯ МАРГИЛАН (Продолжение)",
@@ -292,8 +333,15 @@ export const translations = {
                     style: "project-gallery",
                     customerLabel: "Заказчик:",
                     customerValue: "АО «Узтрансгаз»",
+                    locationValue: "Дангара, Ферганская область",
+                    roleValue: "Генеральный подрядчик (EPC)",
                     worksLabel: "Работы:",
-                    worksValue: "Реализация проекта по строительству и оснащению газораспределительной станции. Выполнен монтаж узлов редуцирования, систем одоризации и трубопроводной обвязки для обеспечения надежного газоснабжения."
+                    worksValue: "Комплексное строительство газораспределительной инфраструктуры.",
+                    content: [
+                        { title: "Модернизация", desc: "Замена устаревшего оборудования на современные автоматизированные узлы." },
+                        { title: "Безопасность", desc: "Внедрение систем контроля утечек и аварийного отключения." },
+                        { title: "Инфраструктура", desc: "Прокладка новых трубопроводных линий и подключение к магистрали." }
+                    ]
                 },
                 15: {
                     title: "ГАЗОРАСПРЕДЕЛИТЕЛЬНАЯ СТАНЦИЯ ДАНГАРА (Продолжение)",
@@ -308,8 +356,15 @@ export const translations = {
                     style: "project-gallery",
                     customerLabel: "Заказчик:",
                     customerValue: "АО «Узтрансгаз»",
+                    locationValue: "Асака, Андижанская область",
+                    roleValue: "Генеральный подрядчик (EPC)",
                     worksLabel: "Работы:",
-                    worksValue: "Реализация проекта по строительству и оснащению газораспределительной станции. Выполнен монтаж технологического оборудования, трубопроводной обвязки и благоустройство территории для обеспечения бесперебойного газоснабжения."
+                    worksValue: "Строительство и техническое переоснащение станции нового поколения.",
+                    content: [
+                        { title: "Технологии", desc: "Установка высокоточных узлов учета и редуцирования газа." },
+                        { title: "Строительство", desc: "Возведение технологических зданий и операторных пунктов." },
+                        { title: "Благоустройство", desc: "Комплексное благоустройство территории станции и охранной зоны." }
+                    ]
                 },
                 17: {
                     title: "ГАЗОРАСПРЕДЕЛИТЕЛЬНАЯ СТАНЦИЯ АСАКА (Продолжение)",
@@ -758,6 +813,46 @@ export const translations = {
                 3: {
                     title: "Industrial Power Systems",
                     desc: "Large-scale modernization of an industrial electrical system, including power distribution and emergency systems."
+                },
+                4: {
+                    title: "Asaka Bank Media Facade",
+                    desc: "Installation of unique digital media facade and control systems."
+                },
+                5: {
+                    title: "Margilan GRS",
+                    desc: "Reconstruction of gas distribution station with SCADA implementation."
+                },
+                6: {
+                    title: "Residential Complex No. 116",
+                    desc: "Full cycle electrical installation works for modern residential building."
+                },
+                7: {
+                    title: "Solar Samarkand",
+                    desc: "Construction of solar photovoltaic power station."
+                },
+                8: {
+                    title: "SOHO Residence",
+                    desc: "Electrical installation works for premium residential complex."
+                },
+                9: {
+                    title: "Aloqa Bank",
+                    desc: "Modernization of power supply and lighting systems."
+                },
+                10: {
+                    title: "PSB Bank",
+                    desc: "Installation of multimedia systems and lighting."
+                },
+                11: {
+                    title: "Asaka GRS",
+                    desc: "Construction and equipment of gas distribution station."
+                },
+                12: {
+                    title: "Residential Complex No. 160",
+                    desc: "Construction of a modern residential building in Namangan."
+                },
+                13: {
+                    title: "Residential Complex No. 222",
+                    desc: "Full cycle construction and engineering equipment."
                 }
             }
         },
@@ -789,6 +884,11 @@ export const translations = {
         presentation: {
             title: "Our Presentation",
             viewPresentation: "View Presentation",
+            entry: {
+                tagline: "Engineering The Future Since 2009",
+                openBtn: "Open Presentation",
+                portfolioLabel: "INTERACTIVE PORTFOLIO v2.0"
+            },
             slides: {
                 1: {
                     title: "Doctor Energy",
@@ -1429,6 +1529,46 @@ Total Area: 1996.32 m².`
                 3: {
                     title: "Sanoat energiya tizimlari",
                     desc: "Sanoat elektr tizimini keng ko'lamli modernizatsiya qilish, shu jumladan quvvat taqsimoti va avariya tizimlari."
+                },
+                4: {
+                    title: "Asaka Bank Media Fasad",
+                    desc: "Noyob raqamli media-fasad va boshqaruv tizimlarini o'rnatish."
+                },
+                5: {
+                    title: "Marg'ilon GRS",
+                    desc: "SCADA tizimini joriy etish bilan gaz taqsimlash stantsiyasini rekonstruktsiya qilish."
+                },
+                6: {
+                    title: "Turar Joy Majmuasi №116",
+                    desc: "Zamonaviy turar-joy binosi uchun to'liq elektr montaj ishlari."
+                },
+                7: {
+                    title: "Samarqand Quyosh Stantsiyasi",
+                    desc: "Quyosh fotoelektr stantsiyasini qurish."
+                },
+                8: {
+                    title: "SOHO Residence",
+                    desc: "Premium klassdagi turar-joy majmuasi uchun elektr montaj ishlari."
+                },
+                9: {
+                    title: "Aloqa Bank",
+                    desc: "Elektr ta'minoti va yoritish tizimlarini modernizatsiya qilish."
+                },
+                10: {
+                    title: "PSB Bank",
+                    desc: "Multimedia tizimlari va yoritishni o'rnatish."
+                },
+                11: {
+                    title: "Asaka GRS",
+                    desc: "Gaz taqsimlash stantsiyasini qurish va jihozlash."
+                },
+                12: {
+                    title: "Turar Joy Majmuasi №160",
+                    desc: "Namanganda zamonaviy turar-joy binosini qurish."
+                },
+                13: {
+                    title: "Turar Joy Majmuasi №222",
+                    desc: "To'liq qurilish tsikli va muhandislik jihozlari."
                 }
             }
         },
@@ -1460,6 +1600,11 @@ Total Area: 1996.32 m².`
         presentation: {
             title: "Bizning taqdimot",
             viewPresentation: "Taqdimotni ko'rish",
+            entry: {
+                tagline: "2009 yildan beri kelajakni quramiz",
+                openBtn: "Taqdimotni ochish",
+                portfolioLabel: "INTERAKTIV PORTFOLIO v2.0"
+            },
             slides: {
                 1: {
                     title: "Doctor Energy",
