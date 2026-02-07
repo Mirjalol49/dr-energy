@@ -3,11 +3,17 @@ import Header from "./assets/Pages/Header/Header";
 import Main from "./assets/Pages/Main/Main";
 // import TestPage from "./assets/Pages/testpage/TestPage";
 import Footer from "./assets/Pages/Footer/Footer";
+import { useLanguage } from "./context/LanguageContext";
 
 import Presentation from "./assets/Pages/Main/Presentation/Presentation";
 
 function App() {
   const [isPresentationMode, setIsPresentationMode] = React.useState(window.location.pathname === '/presentation');
+  const { t } = useLanguage();
+
+  React.useEffect(() => {
+    document.title = t('hero.title');
+  }, [t]);
 
   React.useEffect(() => {
     const handlePopState = () => {

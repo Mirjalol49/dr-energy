@@ -5,11 +5,11 @@ export const translations = {
             about: "О нас",
             projects: "Проекты",
             faq: "FAQ",
-            contact: "Контакты",
+            contact: "Связаться с нами",
         },
         hero: {
-            span: "ПОСТАВЩИК ЭЛЕКТРИЧЕСКИХ РЕШЕНИЙ",
-            title: "Запитайте свой дом с Doctor Energy",
+            span: "Энергия для вашего бизнеса",
+            title: "Энергия для вашего бизнеса\nс Doctor Energy",
             btn: "Связаться сегодня",
         },
         aboutUs: {
@@ -31,7 +31,7 @@ export const translations = {
                     cat: "Коммерческие"
                 },
                 2: {
-                    title: "Аварийные электроуслуги",
+                    title: "Аварийные и восстановительные работы",
                     desc: "Наша круглосуточная группа быстрого реагирования готова решить любые проблемы с электричеством",
                     cat: "Промышленные"
                 },
@@ -730,7 +730,7 @@ export const translations = {
             quickLinks: "Быстрые ссылки",
             contactInfo: "Контактная информация",
             businessHours: "Часы работы",
-            addr: "Улица Энергетиков 123, Город, Страна",
+            addr: "Чиланзар 8-53, Ташкент, Узбекистан",
             monFri: "Понедельник - Пятница",
             sat: "Суббота:",
             sun: "Воскресенье:",
@@ -750,7 +750,7 @@ export const translations = {
         },
         hero: {
             span: "ELECTRICAL SOLUTION PROVIDER",
-            title: "Power Your Home With Doctor Energy",
+            title: "Power Up Your Facility\nWith Doctor Energy",
             btn: "Contact Today",
         },
         aboutUs: {
@@ -860,24 +860,24 @@ export const translations = {
             title: "Frequently Asked Questions",
             items: {
                 1: {
-                    title: "What services do you provide?",
-                    desc: "We offer a full range of electrical services, including repair, installation, smart home systems, and 24/7 emergency service."
+                    q: "What services do you provide?",
+                    a: "We offer a full range of electrical services, including repair, installation, smart home systems, and 24/7 emergency service."
                 },
                 2: {
-                    title: "Do you provide emergency services?",
-                    desc: "Yes, we provide 24/7 emergency electrical services with fast response times."
+                    q: "Do you provide emergency services?",
+                    a: "Yes, we provide 24/7 emergency electrical services with fast response times."
                 },
                 3: {
-                    title: "How to order a service or get a quote?",
-                    desc: "Fill out the form on the website, call us, or send an email. We will respond within 24 hours."
+                    q: "How to order a service or get a quote?",
+                    a: "Fill out the form on the website, call us, or send an email. We will respond within 24 hours."
                 },
                 4: {
-                    title: "Are your electricians licensed?",
-                    desc: "Absolutely. All our specialists are licensed, certified, and insured."
+                    q: "Are your electricians licensed?",
+                    a: "Absolutely. All our specialists are licensed, certified, and insured."
                 },
                 5: {
-                    title: "Which areas do you serve?",
-                    desc: "We serve the entire metropolis and surrounding areas. Contact us for details."
+                    q: "Which areas do you serve?",
+                    a: "We serve the entire metropolis and surrounding areas. Contact us for details."
                 }
             }
         },
@@ -1215,6 +1215,7 @@ Total Area: 1996.32 m².`
                     style: "services-split",
                     imageFit: "cover",
                     imagePadding: "0",
+                    addr: "8-53 Chilonzor, Toshkent, O'zbekiston",
                     subtitle: "The Energy 'Heart' of the Country's Largest Mall",
                     content: [[
                         {
@@ -1446,7 +1447,7 @@ Total Area: 1996.32 m².`
             quickLinks: "Quick Links",
             contactInfo: "Contact Info",
             businessHours: "Business Hours",
-            addr: "123 Energy Street, City, Country",
+            addr: "8-53 Chilanzar, Tashkent, Uzbekistan",
             monFri: "Monday - Friday",
             sat: "Saturday:",
             sun: "Sunday:",
@@ -1465,9 +1466,9 @@ Total Area: 1996.32 m².`
             contact: "Bog'lanish",
         },
         hero: {
-            span: "ELEKTR YECHIMLARI TAMINLOVCHISI",
-            title: "Doctor Energy bilan uyingizni quvvatlang",
-            btn: "Bugun bog'laning",
+            span: "ELEKTR ENERGIYASI YECHIMLARI",
+            title: "Doctor Energy\nbilan uyingizni quvvatlang",
+            btn: "Bog'lanish",
         },
         aboutUs: {
             subtitle: "Qurilish va muhandislik sohasida mutaxassislar",

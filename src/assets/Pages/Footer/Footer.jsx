@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import logo from '../../images/logo_winter.png';
+import logo from '../../images/drenergy_logo.png';
 
 import { useLanguage } from '../../../context/LanguageContext';
 

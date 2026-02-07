@@ -5,6 +5,8 @@ import Logo from "../../images/drenergy_logo.png";
 import { useLanguage } from "../../../context/LanguageContext";
 import { ChevronDown } from "lucide-react";
 
+import TopBar from "./TopBar";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,6 +73,7 @@ const Header = () => {
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+      <TopBar />
       <div className="container">
         <div className="header-wrapper">
           <a href="https://www.enercon.uz/" className="logo-link">

@@ -418,3 +418,123 @@
         margin: 10px 0;
     }
 }
+
+/* Top Bar Styles */
+.top-bar {
+    background-color: hsla(198, 66%, 10%, 0.95);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    z-index: 1001;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+}
+
+.weather-widget {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.weather-widget:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.weather-icon {
+    color: #ffd700;
+}
+
+.weather-icon.rain,
+.weather-icon.snow,
+.weather-icon.storm {
+    color: #a0c4ff;
+}
+
+.weather-text {
+    font-weight: 500;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.currency-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: default;
+}
+
+.currency-icon {
+    opacity: 0.8;
+}
+
+.currency-pair {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.currency-value {
+    font-weight: 600;
+    color: #fff;
+}
+
+.currency-symbol {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.divider {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 12px;
+}
+
+.highlight-btc .currency-icon.btc-icon {
+    color: #f7931a;
+    opacity: 1;
+}
+
+.highlight-btc .currency-value {
+    color: #f7931a;
+}
+
+@media (max-width: 900px) {
+    .top-bar-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .top-bar-right {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        display: none;
+    }
+}
