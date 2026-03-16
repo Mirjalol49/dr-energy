@@ -45,8 +45,6 @@ const Services = () => {
               category={t(`services.items.${service.id}.cat`)}
               title={t(`services.items.${service.id}.title`)}
               description={t(`services.items.${service.id}.desc`)}
-              linkText={t('services.learnMore')}
-              linkUrl={"1"}
             />
           ))}
         </div>

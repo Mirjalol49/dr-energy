@@ -81,10 +81,10 @@ export default function PdfVerificationScreen() {
         style={prefersReducedMotion ? {} : { isolation: 'isolate' }}
       >
         {/* Soft diffused glow background */}
-        <div className="absolute -inset-10 bg-gradient-to-tr from-slate-100/50 to-blue-50/50 -z-10 blur-3xl pointer-events-none" />
+        <div className="absolute -inset-10 bg-gradient-to-tr from-slate-100/50 to-[#cdfc4e]/10 -z-10 blur-3xl pointer-events-none" />
 
         <div className="flex flex-col items-center text-center space-y-6">
-          <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center shadow-sm border border-blue-100">
+          <div className="w-16 h-16 bg-[#4d7c0f]/10 text-[#4d7c0f] rounded-2xl flex items-center justify-center shadow-sm border border-[#4d7c0f]/20">
             {isVerifying ? (
               <ShieldCheck className="w-8 h-8 animate-pulse" />
             ) : (
@@ -118,7 +118,7 @@ export default function PdfVerificationScreen() {
                   className={`w-14 h-16 text-center text-2xl font-medium rounded-xl border-2 bg-white/50 focus:bg-white outline-none transition-all duration-200 
                     ${error 
                       ? 'border-red-300 text-red-600 focus:border-red-400 focus:ring-4 focus:ring-red-100/50' 
-                      : 'border-slate-200 text-slate-900 focus:border-blue-500 focus:ring-4 focus:ring-blue-100/50'
+                      : 'border-slate-200 text-slate-900 focus:border-[#4d7c0f] focus:ring-4 focus:ring-[#cdfc4e]/30'
                     }
                     ${isVerifying ? 'opacity-50 cursor-not-allowed' : ''}
                   `}

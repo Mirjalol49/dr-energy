@@ -1,5 +1,5 @@
 .footer {
-    background-color: hsl(198, 67%, 13%);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 1) 0%, rgba(15, 23, 42, 1) 100%);
     color: #fff;
     padding: 6rem 0 2rem;
     position: relative;
@@ -16,7 +16,7 @@
     background: linear-gradient(
         90deg,
         transparent,
-        hsl(76deg 97% 65%) 50%,
+        #cdfc4e 50%,
         transparent
     );
 }
@@ -51,7 +51,7 @@
 }
 
 .footer-section h4 {
-    color: hsl(76deg 97% 65%);
+    color: #cdfc4e;
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -66,7 +66,7 @@
     left: 0;
     width: 40px;
     height: 2px;
-    background: hsl(76deg 97% 65%);
+    background: #cdfc4e;
     transition: width 0.3s ease;
 }
 
@@ -101,8 +101,8 @@
 }
 
 .social-links a:hover {
-    color: hsl(198, 67%, 13%);
-    background: hsl(76deg 97% 65%);
+    color: #ffffff;
+    background: #cdfc4e;
     transform: translateY(-3px);
 }
 
@@ -115,7 +115,7 @@
     margin-bottom: 1rem;
 }
 .footer-span {
-    color: hsl(76deg 97% 65%);
+    color: #cdfc4e;
 }
 .footer-section ul li a {
     color: rgba(255, 255, 255, 0.9);
@@ -132,11 +132,11 @@
     left: -10px;
     opacity: 0;
     transition: all 0.3s ease;
-    color: hsl(76deg 97% 65%);
+    color: #cdfc4e;
 }
 
 .footer-section ul li a:hover {
-    color: hsl(76deg 97% 65%);
+    color: #cdfc4e;
     padding-left: 20px;
 }
 
@@ -146,7 +146,7 @@
 }
 
 .contact-info  {
-    background-color: hsl(198, 67%, 13%);
+    background-color: transparent;
     border: none;
 }
 
@@ -169,7 +169,7 @@
 }
 
 .contact-info li i {
-    color: hsl(76deg 97% 65%);
+    color: #cdfc4e;
     font-size: 1.2rem;
 }
 
@@ -214,7 +214,7 @@
     transform: translateX(-50%);
     width: 50px;
     height: 2px;
-    background: hsl(76deg 97% 65%);
+    background: #cdfc4e;
 }
 
 .copyright {
@@ -242,12 +242,12 @@
     left: 0;
     width: 0;
     height: 1px;
-    background: hsl(76deg 97% 65%);
+    background: #cdfc4e;
     transition: width 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: hsl(76deg 97% 65%);
+    color: #cdfc4e;
 }
 
 .footer-links a:hover::after {

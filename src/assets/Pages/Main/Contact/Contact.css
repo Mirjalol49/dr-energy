@@ -1,7 +1,7 @@
 .contact-section {
     margin: 0;
     padding: 4rem 0;
-    background-color: hsl(198, 67%, 13%);
+    background-color: transparent; /* Inherits global background */
     position: relative;
     overflow: hidden;
     opacity: 0;
@@ -29,9 +29,9 @@
 }
 
 .contact-title {
-    color: #fff;
+    color: #0f172a; /* Slate 900 */
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.2;
     text-align: center;
     margin: 0 0 60px 0;
@@ -54,11 +54,12 @@
 
 .contact-info {
     padding: 40px;
-    background: rgba(255, 255, 255, 0.03);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px);
     position: relative;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
 }
 
 /* Remove decorative info elements */
@@ -103,15 +104,16 @@
 .contact-detail-item i {
     margin-right: 15px;
     font-size: 1.2rem;
-    color: hsl(76deg 97% 65%);
+    color: #cdfc4e;
 }
 
 .contact-form {
     padding: 40px;
-    background: rgba(255, 255, 255, 0.03);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
 }
 
 .form-group {
@@ -143,7 +145,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: hsl(76deg 97% 65%);
+    border-color: #cdfc4e;
     background: rgba(255, 255, 255, 0.08);
 }
 
@@ -162,8 +164,8 @@
 .submit-button {
     width: 100%;
     padding: 16px 32px;
-    background: hsl(76deg 97% 65%);
-    color: hsl(198, 67%, 13%);
+    background: #cdfc4e;
+    color: #0f172a;
     border: none;
     border-radius: 8px;
     font-size: 1.15rem;
@@ -175,7 +177,7 @@
 
 .submit-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(157, 255, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(205, 252, 78, 0.3);
 }
 
 .submit-button:active {

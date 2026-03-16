@@ -1,19 +1,28 @@
 import React from "react";
 import "./ServiceCard.css";
+import { animated } from 'react-spring';
+import { useBoop } from "../../../hooks/useBoop";
 
-const EmergencyElectricalCard = ({ image, category, title, description, linkText, linkUrl }) => {
+const EmergencyElectricalCard = ({ image, category, title, description }) => {
+  const [imgBoopStyle, triggerImgBoop] = useBoop({ scale: 1.03, timing: 250, springConfig: { tension: 300, friction: 20 } });
+
   return (
-    <div className="service-card">
+    <div 
+      className="service-card"
+      onMouseEnter={triggerImgBoop}
+    >
       <div className="service-video">
-       <img className="service-img" src={image} alt="image" />
+        <animated.img 
+            style={imgBoopStyle}
+            className="service-img" 
+            src={image} 
+            alt={title} 
+        />
       </div>
       <div className="service-content">
         <h3 className="service-category">{category}</h3>
         <h2 className="service-title">{title}</h2>
         <p className="service-description">{description}</p>
-        <a href={linkUrl} className="service-link">
-          {linkText}
-        </a>
       </div>
     </div>
   );

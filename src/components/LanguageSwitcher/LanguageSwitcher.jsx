@@ -9,7 +9,7 @@ const LanguageSwitcher = () => {
 
   const languages = {
     en: { name: 'English', flag: '🇬🇧' },
-    uz: { name: 'O'zbek', flag: '🇺🇿' },
+    uz: { name: 'O\'zbek', flag: '🇺🇿' },
     ru: { name: 'Русский', flag: '🇷🇺' }
   };
 

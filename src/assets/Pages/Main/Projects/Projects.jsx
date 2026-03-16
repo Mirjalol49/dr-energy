@@ -113,7 +113,7 @@ const Projects = () => {
       id: 10, slideId: 39,
       title: t('projects.items.10.title'),
       description: t('projects.items.10.desc'),
-      image: projectsData[10].gallery[0],
+      image: projectsData[9].gallery[0], // Used a solid image from Lot-6 to fix gray/failed video loading
       gallery: projectsData[10].gallery
     },
     {
@@ -141,11 +141,35 @@ const Projects = () => {
     }
   ];
 
-  const featured = projects.slice(0, 3);
-  const grid = projects.slice(3);
+
 
   const handleOpenPresentation = () => {
     window.location.href = '/presentation';
+  };
+
+  const renderMedia = (src, title) => {
+    if (!src) return null;
+    const isVideo = src.match(/\.(mp4|webm|ogg|mov)$/i);
+    if (isVideo) {
+      return (
+        <video
+          className="featured-card-img"
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      );
+    }
+    return (
+      <img
+        className="featured-card-img"
+        src={src}
+        alt={title}
+        loading="lazy"
+      />
+    );
   };
 
   return (
@@ -155,54 +179,21 @@ const Projects = () => {
         <h2 className='project-title'>{t('projects.title')}</h2>
       </div>
 
-      {/* Featured Projects (Top 3) */}
-      <div className="projects-featured">
-        {featured.map((project) => (
+      {/* All Projects Grid */}
+      <div className="projects-grid">
+        {projects.map((project) => (
           <div
             className="featured-card"
             key={project.id}
             onClick={() => setSelectedProject(project)}
           >
-            <img
-              className='featured-card-img'
-              src={project.image}
-              alt={project.title}
-              loading="lazy"
-            />
+            {renderMedia(project.image, project.title)}
             <div className="featured-card-overlay">
-              <h3 className='featured-card-title'>{project.title}</h3>
-              <p className='featured-card-desc'>{project.description}</p>
+              <h3 className="featured-card-title">{project.title}</h3>
+              <p className="featured-card-desc">{project.description}</p>
               <button className="featured-card-link">
                 {t('projects.learnMore')}
                 <ArrowRight size={14} />
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Grid Projects (Remaining) */}
-      <div className="projects-wrapper">
-        {grid.map((project) => (
-          <div
-            className="project-item"
-            key={project.id}
-            onClick={() => setSelectedProject(project)}
-          >
-            <div className="projects-img-wrapper">
-              <img
-                className='projects-img'
-                src={project.image}
-                alt={project.title}
-                loading="lazy"
-              />
-            </div>
-            <div className="project-item-content">
-              <h3 className='project-item-title'>{project.title}</h3>
-              <p className='project-item-text'>{project.description}</p>
-              <button className="project-item-link">
-                {t('projects.learnMore')}
-                <ArrowRight size={12} />
               </button>
             </div>
           </div>
@@ -216,8 +207,8 @@ const Projects = () => {
             className="cta-banner-bg"
             style={{ backgroundImage: `url(${buildingBg})` }}
           />
-          <div className="cta-banner-overlay" />
           <div className="cta-banner-content">
+            <span className="cta-banner-label">{t('presentation.entry.portfolioLabel')}</span>
             <h2 className="cta-banner-title">Doctor Energy</h2>
             <p className="cta-banner-tagline">{t('presentation.entry.tagline')}</p>
             <button className="cta-banner-btn">
@@ -225,7 +216,6 @@ const Projects = () => {
               {t('presentation.entry.openBtn')}
             </button>
           </div>
-          <span className="cta-banner-label">{t('presentation.entry.portfolioLabel')}</span>
         </div>
       </div>
 

@@ -1,189 +1,123 @@
 .service-card {
     width: 100%;
-    max-width: 24rem;
     height: 100%;
-    border: 1px solid rgba(11, 41, 54, 0.12);
-    border-radius: 16px;
+    border-radius: 24px;
     overflow: hidden;
-    background-color: #ffffff;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform, box-shadow;
-    box-shadow: 0 4px 6px -1px rgba(11, 41, 54, 0.1),
-                0 2px 4px -1px rgba(11, 41, 54, 0.06);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
 }
 
 .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 25px 50px -12px rgba(11, 41, 54, 0.25);
-    border-color: rgba(11, 41, 54, 0.15);
-    background-color: #fafcfd;
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+    border-color: rgba(205, 252, 78, 0.4); /* Brand Lime tint */
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.9) 100%); 
+}
+
+/* Tactile click effect */
+.service-card:active {
+    transform: scale(0.98);
 }
 
 .service-video {
     overflow: hidden;
     position: relative;
+    aspect-ratio: 16 / 10;
+    width: 100%;
 }
 
 .service-video::after {
     content: '';
     position: absolute;
     inset: 0;
+    /* Soft dark gradient overlay for seamless blending */
     background: linear-gradient(
         to bottom,
         transparent 0%,
-        transparent 65%,
-        rgba(255, 255, 255, 0.15) 100%
+        rgba(15, 23, 42, 0.1) 60%,
+        rgba(15, 23, 42, 0.95) 100%
     );
     z-index: 1;
+    pointer-events: none;
 }
 
 .service-img {
     width: 100%;
-    height: auto;
-    border-radius: 16px 16px 0 0;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.95);
     will-change: transform;
-    filter: brightness(1.02);
-}
-
-.service-content {
-    padding: 1.75rem;
-    background: linear-gradient(
-        to bottom,
-        rgba(250, 252, 253, 0.95),
-        rgba(250, 252, 253, 1)
-    );
-    border-top: 1px solid rgba(11, 41, 54, 0.06);
-}
-
-.service-category {
-    opacity: 0.75;
-    font-weight: 500;
-    font-size: 0.95rem;
-    margin-bottom: 0.75rem;
-    color: hsl(199, 67%, 13%);
-    letter-spacing: 0.5px;
-}
-
-.service-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: hsl(199, 67%, 13%);
-    word-spacing: 1px;
-    letter-spacing: -0.3px;
-    margin-bottom: 1rem;
-    line-height: 1.3;
-}
-
-.service-description {
-    color: hsl(199, 67%, 13%, 0.8);
-    word-spacing: 1px;
-    letter-spacing: 0.3px;
-    line-height: 1.6;
-    margin-bottom: 1.75rem;
-    font-size: 1rem;
-}
-
-.service-link {
-    font-size: 1.1rem;
-    color: hsl(199, 67%, 13%);
-    word-spacing: 1px;
-    letter-spacing: 0.3px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    font-weight: 500;
-    position: relative;
-    padding-bottom: 2px;
-}
-
-.service-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: currentColor;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-.service-link:hover {
-    color: hsl(237, 78%, 52%);
-    transform: translateX(5px);
-}
-
-.service-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
 }
 
 .service-card:hover .service-img {
-    transform: scale(1.08);
+    filter: brightness(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .service-card:hover .service-img,
+    .service-img {
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+.service-content {
+    padding: 1.5rem 2rem 2.5rem;
+    background: transparent;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.service-category {
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+    color: #cdfc4e; /* Brand Lime */
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.service-title {
+    font-size: clamp(1.4rem, 2vw, 1.7rem);
+    font-weight: 700;
+    color: #ffffff; 
+    letter-spacing: -0.01em;
+    margin-bottom: 1.25rem;
+    line-height: 1.25;
+}
+
+.service-description {
+    color: #cbd5e1; /* Slate 300 */
+    letter-spacing: 0.01em;
+    line-height: 1.65;
+    font-size: 1.05rem;
+    flex-grow: 1;
+    margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
-    .service-card {
-        max-width: 95%;
-        box-shadow: 0 4px 6px -1px rgba(11, 41, 54, 0.08),
-                    0 2px 4px -1px rgba(11, 41, 54, 0.04);
-    }
-
     .service-content {
-        padding: 1.5rem;
-    }
-
-    .service-title {
-        font-size: 1.35rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .service-description {
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
-        line-height: 1.5;
-    }
-
-    .service-link {
-        font-size: 1rem;
+        padding: 1.25rem 1.5rem 2rem;
     }
 }
 
 @media (max-width: 480px) {
     .service-card {
-        max-width: 92%;
-        border-radius: 12px;
-        margin: 0 auto;
+        border-radius: 20px;
     }
-
-    .service-img {
-        border-radius: 12px 12px 0 0;
-    }
-
+    
     .service-content {
-        padding: 1.25rem;
-    }
-
-    .service-title {
-        font-size: 1.25rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .service-category {
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .service-description {
-        font-size: 0.9rem;
-        margin-bottom: 1.25rem;
-        line-height: 1.5;
-    }
-
-    .service-link {
-        font-size: 0.95rem;
+        padding: 1rem 1.25rem 1.75rem;
     }
 }

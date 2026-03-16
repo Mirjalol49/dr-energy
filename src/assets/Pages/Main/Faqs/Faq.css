@@ -1,7 +1,7 @@
 .faq-section {
     margin: 80px 0 0 0;
     padding: 4rem 0;
-    background-color: hsl(198, 67%, 13%);
+    background-color: transparent; /* Inherits global background */
     position: relative;
     overflow: hidden;
 }
@@ -47,7 +47,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, hsl(76deg 97% 65%), rgba(255, 255, 255, 0.8));
+    background: linear-gradient(90deg, #cdfc4e, rgba(255, 255, 255, 0.8));
     border-radius: 2px;
 }
 

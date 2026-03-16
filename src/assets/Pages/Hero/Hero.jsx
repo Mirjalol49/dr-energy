@@ -25,7 +25,7 @@ const Hero = () => {
         
         {/* Sleek pill badge */}
         <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-slate-100 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-6 shadow-[0_0_15px_rgba(255,255,255,0.05)] ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
-          <Sparkles className="w-4 h-4 text-[#ccfc4d]" />
+          <Sparkles className="w-4 h-4 text-[#cdfc4e]" />
           <span>{t('hero.span')}</span>
         </div>
 
@@ -47,7 +47,7 @@ const Hero = () => {
                 {index < array.length - 1 && (
                   <span className="whitespace-nowrap">
                     {preposition}
-                    <span className="inline-block text-[#ccfc4d] drop-shadow-[0_2px_10px_rgba(204,252,77,0.2)]">
+                    <span className="inline-block text-[#cdfc4e] drop-shadow-[0_2px_10px_rgba(205,252,78,0.2)]">
                       Doctor Energy
                     </span>
                   </span>
@@ -60,7 +60,7 @@ const Hero = () => {
         {/* Dynamic CTA Button */}
         <button 
           onMouseEnter={triggerBoop}
-          className={`relative isolate inline-flex items-center justify-center gap-3 px-8 py-4 sm:px-10 sm:py-5 bg-[#ccfc4d] hover:bg-[#d6ff66] text-[#0b2c3d] rounded-2xl font-bold transition-all duration-300 active:scale-[0.98] shadow-[0_8px_30px_rgba(204,252,77,0.2)] hover:shadow-[0_12px_40px_rgba(204,252,77,0.35)] overflow-hidden group ${isVisible ? 'animate-slide-up delay-400' : 'opacity-0'}`}
+          className={`relative isolate inline-flex items-center justify-center gap-3 px-8 py-4 sm:px-10 sm:py-5 bg-[#cdfc4e] hover:bg-[#bcf129] text-slate-900 rounded-2xl font-bold transition-all duration-300 active:scale-[0.98] shadow-[0_8px_30px_rgba(205,252,78,0.3)] hover:shadow-[0_12px_40px_rgba(205,252,78,0.5)] overflow-hidden group ${isVisible ? 'animate-slide-up delay-400' : 'opacity-0'}`}
         >
           {/* Shimmer effect */}
           <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-[1.5s] ease-in-out bg-gradient-to-r from-transparent via-white/40 to-transparent -z-10" />
@@ -68,11 +68,11 @@ const Hero = () => {
           <span className="tracking-wide uppercase text-sm sm:text-base">{t('hero.btn')}</span>
           {!prefersReducedMotion ? (
             <animated.div style={boopStyle} className="flex">
-              <ArrowRight className="w-5 h-5 text-[#0b2c3d]" />
+              <ArrowRight className="w-5 h-5 text-slate-900" />
             </animated.div>
           ) : (
             <div className="flex">
-              <ArrowRight className="w-5 h-5 text-[#0b2c3d]" />
+              <ArrowRight className="w-5 h-5 text-slate-900" />
             </div>
           )}
         </button>

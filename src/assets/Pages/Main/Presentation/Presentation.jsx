@@ -496,8 +496,8 @@ const Presentation = ({ standalone = false }) => {
 
     return (
         <>
-            {/* ENTRY BUTTON - ARCHITECTURAL STYLE */}
-            <section className='presentation-section' id='presentation' style={{ marginBottom: '50px', padding: '0 20px' }}>
+            {/* ENTRY BUTTON - PREMIUM GLASS STYLE */}
+            <section className='presentation-section' id='presentation' style={{ margin: '80px 0', padding: '0 0' }}>
                 <div className="container" data-aos="fade-up" style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div className="presentation-entry-wrapper" style={{
                         position: 'relative',
@@ -511,67 +511,87 @@ const Presentation = ({ standalone = false }) => {
                         justifyContent: 'center',
                         alignItems: 'center',
                         textAlign: 'center',
-                        border: '1px solid #000', // Architectural Border
+                        borderRadius: '24px',
                         overflow: 'hidden',
-                        cursor: 'pointer'
-                    }} onClick={openPresentation}>
+                        cursor: 'pointer',
+                        boxShadow: '0 20px 40px -10px rgba(0,0,0,0.1)',
+                        transition: 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease'
+                    }} 
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-5px)';
+                        e.currentTarget.style.boxShadow = '0 30px 60px -15px rgba(0,0,0,0.2)';
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.boxShadow = '0 20px 40px -10px rgba(0,0,0,0.1)';
+                    }}
+                    onClick={openPresentation}>
 
-                        {/* Overlay to ensure text readability */}
+                        {/* Premium Dark Glass Overlay */}
                         <div style={{
                             position: 'absolute',
                             top: 0,
                             left: 0,
                             width: '100%',
                             height: '100%',
-                            background: 'rgba(255, 255, 255, 0.85)', // Light technical overlay
+                            background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%)',
+                            backdropFilter: 'blur(8px)',
                             zIndex: 1
                         }}></div>
 
                         {/* Content Layer */}
-                        <div style={{ position: 'relative', zIndex: 2, padding: '20px' }}>
+                        <div style={{ position: 'relative', zIndex: 2, padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <h2 style={{
                                 fontSize: 'clamp(3rem, 5vw, 5rem)',
-                                fontWeight: '900',
-                                color: '#000',
+                                fontWeight: '800',
+                                color: '#ffffff',
                                 textTransform: 'uppercase',
-                                letterSpacing: '-2px',
+                                letterSpacing: '-1px',
                                 marginBottom: '20px',
-                                lineHeight: '1'
+                                lineHeight: '1.1'
                             }}>
                                 DOCTOR ENERGY
                             </h2>
                             <p style={{
                                 fontSize: '1.2rem',
-                                color: '#003366', // Architectural Blue
-                                fontWeight: '600',
+                                color: '#f8fafc',
+                                fontWeight: '500',
                                 textTransform: 'uppercase',
-                                letterSpacing: '3px',
-                                background: '#fff',
-                                padding: '10px 20px',
-                                border: '1px solid #000',
+                                letterSpacing: '4px',
+                                padding: '12px 24px',
+                                borderBottom: '2px solid #cdfc4e',
                                 display: 'inline-block',
-                                marginBottom: '40px'
+                                marginBottom: '50px'
                             }}>
                                 {t('presentation.entry.tagline')}
                             </p>
 
                             <div>
                                 <button style={{
-                                    background: '#000',
-                                    color: '#fff',
+                                    background: '#cdfc4e',
+                                    color: '#0f172a',
                                     border: 'none',
-                                    padding: '15px 40px',
-                                    fontSize: '1rem',
+                                    borderRadius: '50px',
+                                    padding: '16px 40px',
+                                    fontSize: '1.1rem',
                                     fontWeight: '700',
                                     textTransform: 'uppercase',
-                                    letterSpacing: '2px',
+                                    letterSpacing: '1px',
                                     cursor: 'pointer',
                                     display: 'flex',
                                     alignItems: 'center',
-                                    gap: '10px',
-                                    margin: '0 auto'
+                                    gap: '12px',
+                                    margin: '0 auto',
+                                    transition: 'all 0.3s ease',
+                                    boxShadow: '0 10px 20px -5px rgba(205, 252, 78, 0.3)'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.transform = 'scale(1.05)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.transform = 'scale(1)';
                                 }}>
-                                    <FaPlay size={14} /> {t('presentation.entry.openBtn')}
+                                    <FaPlay size={16} /> {t('presentation.entry.openBtn')}
                                 </button>
                             </div>
                         </div>
@@ -579,13 +599,14 @@ const Presentation = ({ standalone = false }) => {
                         {/* Decor elements */}
                         <div style={{
                             position: 'absolute',
-                            bottom: '20px',
-                            right: '20px',
-                            fontSize: '0.8rem',
-                            color: '#000',
-                            fontWeight: '600',
+                            bottom: '30px',
+                            right: '30px',
+                            fontSize: '0.9rem',
+                            color: 'rgba(255, 255, 255, 0.5)',
+                            fontWeight: '500',
                             zIndex: 2,
-                            letterSpacing: '1px'
+                            letterSpacing: '2px',
+                            textTransform: 'uppercase'
                         }}>
                             {t('presentation.entry.portfolioLabel')}
                         </div>

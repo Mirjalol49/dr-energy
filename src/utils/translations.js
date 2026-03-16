@@ -60,6 +60,10 @@ export const translations = {
         projects: {
             title: "Избранные Проекты",
             learnMore: "Подробнее",
+            completed: "Завершено",
+            aboutProject: "О проекте",
+            scopeOfWork: "Объем работ:",
+            categoryFallback: "Проект",
             items: {
                 1: {
                     title: "Tashkent City Mall",
@@ -801,6 +805,10 @@ export const translations = {
         projects: {
             title: "Featured Projects",
             learnMore: "Learn More",
+            completed: "Completed",
+            aboutProject: "About Project",
+            scopeOfWork: "Scope of Work:",
+            categoryFallback: "Project",
             items: {
                 1: {
                     title: "Commercial Electrical Wiring",
@@ -1556,8 +1564,12 @@ Total Area: 1996.32 m².`
             }
         },
         projects: {
-            title: "Tanlangan loyihalar",
+            title: "Tanlangan Loyihalar",
             learnMore: "Batafsil",
+            completed: "Tugallangan",
+            aboutProject: "Loyiha Haqida",
+            scopeOfWork: "Bajarilgan ishlar:",
+            categoryFallback: "Loyiha",
             items: {
                 1: {
                     title: "Tijorat elektr montaji",
