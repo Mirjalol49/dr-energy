@@ -1,0 +1,41 @@
+/* Sticky Back Button */
+.presentation-back-button {
+    position: fixed;
+    top: 100px;
+    left: 30px;
+    z-index: 1000;
+    background: hsl(76, 97%, 65%);
+    color: hsl(198, 67%, 13%);
+    border: none;
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(206, 252, 79, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.presentation-back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(206, 252, 79, 0.5);
+    background: hsl(76, 97%, 60%);
+}
+
+.presentation-back-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .presentation-back-button {
+        top: 80px;
+        left: 15px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}

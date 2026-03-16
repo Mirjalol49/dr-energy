@@ -750,7 +750,7 @@ export const translations = {
         },
         hero: {
             span: "ELECTRICAL SOLUTION PROVIDER",
-            title: "Power Up Your Facility\nWith Doctor Energy",
+            title: "Power Up Your Facility With Doctor Energy",
             btn: "Contact Today",
         },
         aboutUs: {
@@ -1051,15 +1051,23 @@ Total Area: 1996.32 m².`
                     customerLabel: "Customer:",
                     customerValue: "JSC \"Uztransgaz\"",
                     worksLabel: "Scope of Work:",
-                    worksValue: "Implementation of the construction and equipment project for the gas distribution station. Installation of reduction units, odorization systems, and pipeline strapping was performed to ensure reliable gas supply."
+                    worksValue: "Implementation of the construction and equipment project for the gas distribution station. Installation of reduction units, odorization systems, and pipeline strapping was performed to ensure reliable gas supply.",
+                    content: [
+                        { title: "Scope of Work", desc: "Turnkey construction, including foundation, equipment installation, and landscaping." },
+                        { title: "Equipment", desc: "Installation of high-performance gas pressure reduction units." },
+                        { title: "Odorization Systems", desc: "Installation of modern odorization systems to ensure gas supply safety." },
+                        { title: "Engineering", desc: "Complete piping and integration into the existing main network." }
+                    ]
                 },
                 13: {
                     title: "GAS DISTRIBUTION STATION MARGILAN (Continued)",
+                    subtitle: "",
                     style: "project-gallery",
                     customerLabel: "Customer:",
                     customerValue: "JSC \"Uztransgaz\"",
                     worksLabel: "Scope of Work:",
-                    worksValue: "Implementation of the construction and equipment project for the gas distribution station. Installation of reduction units, odorization systems, and pipeline strapping was performed to ensure reliable gas supply."
+                    worksValue: "Implementation of the construction and equipment project for the gas distribution station. Installation of reduction units, odorization systems, and pipeline strapping was performed to ensure reliable gas supply.",
+                    content: []
                 },
                 14: {
                     title: "DANGARA GAS DISTRIBUTION STATION",
@@ -1067,15 +1075,22 @@ Total Area: 1996.32 m².`
                     customerLabel: "Customer:",
                     customerValue: "JSC \"Uztransgaz\"",
                     worksLabel: "Scope of Work:",
-                    worksValue: "Implementation of the construction and equipment project for the gas distribution station. Installation of reduction units, odorization systems, and pipeline strapping was performed to ensure reliable gas supply."
+                    worksValue: "Implementation of the construction and equipment project for the gas distribution station. Installation of reduction units, odorization systems, and pipeline strapping was performed to ensure reliable gas supply.",
+                    content: [
+                        { title: "Modernization", desc: "Replacement of obsolete equipment with modern automated units." },
+                        { title: "Safety", desc: "Implementation of leakage control and emergency shutdown systems." },
+                        { title: "Infrastructure", desc: "Laying new pipeline lines and connecting to the main line." }
+                    ]
                 },
                 15: {
                     title: "DANGARA GAS DISTRIBUTION STATION (Continued)",
+                    subtitle: "",
                     style: "project-gallery",
                     customerLabel: "Customer:",
                     customerValue: "JSC \"Uztransgaz\"",
                     worksLabel: "Scope of Work:",
-                    worksValue: "Implementation of the construction and equipment project for the gas distribution station. Installation of reduction units, odorization systems, and pipeline strapping was performed to ensure reliable gas supply."
+                    worksValue: "Implementation of the construction and equipment project for the gas distribution station. Installation of reduction units, odorization systems, and pipeline strapping was performed to ensure reliable gas supply.",
+                    content: []
                 },
                 16: {
                     title: "ASAKA GAS DISTRIBUTION STATION",
@@ -1083,15 +1098,22 @@ Total Area: 1996.32 m².`
                     customerLabel: "Customer:",
                     customerValue: "JSC \"Uztransgaz\"",
                     worksLabel: "Scope of Work:",
-                    worksValue: "Implementation of the gas distribution station construction and equipment project. Installation of technological equipment, pipeline strapping, and site improvement works were performed to ensure uninterrupted gas supply."
+                    worksValue: "Implementation of the gas distribution station construction and equipment project. Installation of technological equipment, pipeline strapping, and site improvement works were performed to ensure uninterrupted gas supply.",
+                    content: [
+                        { title: "Technology", desc: "Installation of high-precision gas metering and reduction units." },
+                        { title: "Construction", desc: "Construction of technological buildings and operator points." },
+                        { title: "Landscaping", desc: "Comprehensive landscaping of the station territory and security zone." }
+                    ]
                 },
                 17: {
                     title: "ASAKA GAS DISTRIBUTION STATION (Continued)",
+                    subtitle: "",
                     style: "project-gallery",
                     customerLabel: "Customer:",
                     customerValue: "JSC \"Uztransgaz\"",
                     worksLabel: "Scope of Work:",
-                    worksValue: "Implementation of the gas distribution station construction and equipment project. Installation of technological equipment, pipeline strapping, and site improvement works were performed to ensure uninterrupted gas supply."
+                    worksValue: "Implementation of the gas distribution station construction and equipment project. Installation of technological equipment, pipeline strapping, and site improvement works were performed to ensure uninterrupted gas supply.",
+                    content: []
                 },
                 18: {
                     title: "Power Supply and Power Equipment",
@@ -1130,7 +1152,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Partners:",
                     customerValue: "MASDAR / DEC",
                     worksLabel: "Works:",
-                    worksValue: "Engineering and construction-installation works."
+                    worksValue: "Engineering and construction-installation works.",
+                    content: []
                 },
                 21: {
                     title: "NJS-Nur Jizzakh Solar (Gallery)",
@@ -1139,7 +1162,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Partners:",
                     customerValue: "MASDAR / DEC",
                     worksLabel: "Works:",
-                    worksValue: "Engineering and construction-installation works."
+                    worksValue: "Engineering and construction-installation works.",
+                    content: []
                 },
                 22: {
                     title: "NJS-Nur Jizzakh Solar (Gallery)",
@@ -1148,7 +1172,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Partners:",
                     customerValue: "MASDAR / DEC",
                     worksLabel: "Works:",
-                    worksValue: "Engineering and construction-installation works."
+                    worksValue: "Engineering and construction-installation works.",
+                    content: []
                 },
                 23: {
                     title: "SKD-Samarkand Solar Project",
@@ -1199,7 +1224,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Partners:",
                     customerValue: "MASDAR / DEC",
                     worksLabel: "Works:",
-                    worksValue: "PV panel installation, tracker system installation, HV cable laying."
+                    worksValue: "PV panel installation, tracker system installation, HV cable laying.",
+                    content: []
                 },
                 26: {
                     title: "SKD-Samarkand Solar (Gallery)",
@@ -1208,7 +1234,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Partners:",
                     customerValue: "MASDAR / DEC",
                     worksLabel: "Works:",
-                    worksValue: "Commissioning and project handover per IFC standards."
+                    worksValue: "Commissioning and project handover per IFC standards.",
+                    content: []
                 },
                 27: {
                     title: "Tashkent City Mall",
@@ -1285,7 +1312,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Customer:",
                     customerValue: "HYPER PARTNERS GmbH",
                     worksLabel: "Works:",
-                    worksValue: "Switchgear installation, cable laying, transformer installation."
+                    worksValue: "Switchgear installation, cable laying, transformer installation.",
+                    content: []
                 },
                 31: {
                     title: "TASHKENT CITY MALL, HV SUBSTATION 35/0.4kV",
@@ -1294,7 +1322,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Customer:",
                     customerValue: "HYPER PARTNERS GmbH",
                     worksLabel: "Works:",
-                    worksValue: "Commissioning, automation systems, and relay protection."
+                    worksValue: "Commissioning, automation systems, and relay protection.",
+                    content: []
                 },
                 32: {
                     title: "TASHKENT CITY MALL, HV SUBSTATION 35/0.4kV",
@@ -1303,7 +1332,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Customer:",
                     customerValue: "HYPER PARTNERS GmbH",
                     worksLabel: "Works:",
-                    worksValue: "Comprehensive testing and project handover."
+                    worksValue: "Comprehensive testing and project handover.",
+                    content: []
                 },
                 33: {
                     title: "TASHKENT CITY MALL, HV SUBSTATION 35/0.4kV",
@@ -1312,7 +1342,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Customer:",
                     customerValue: "HYPER PARTNERS GmbH",
                     worksLabel: "Works:",
-                    worksValue: "Final inspection and operation."
+                    worksValue: "Final inspection and operation.",
+                    content: []
                 },
                 34: {
                     title: "SOHO BUSINESS CENTER, SUBSTATION 10/0.4kV",
@@ -1321,7 +1352,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Object:",
                     customerValue: "SOHO Business Center",
                     worksLabel: "Works:",
-                    worksValue: "Installation of transformer substation 10/0.4 kV, commissioning."
+                    worksValue: "Installation of transformer substation 10/0.4 kV, commissioning.",
+                    content: []
                 },
                 35: {
                     title: "Media Facade: Intelligent Digital Building Skin",
@@ -1373,7 +1405,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Object:",
                     customerValue: "Lot-6 Asaka Bank",
                     worksLabel: "Works:",
-                    worksValue: "Transformer substation installation, cabling works."
+                    worksValue: "Transformer substation installation, cabling works.",
+                    content: []
                 },
                 38: {
                     title: "TASHKENT CITY, LOT-6\nASAKA BANK",
@@ -1382,7 +1415,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Object:",
                     customerValue: "Lot-6 Asaka Bank",
                     worksLabel: "Works:",
-                    worksValue: "Commissioning works, automation systems."
+                    worksValue: "Commissioning works, automation systems.",
+                    content: []
                 },
                 39: {
                     title: "TASHKENT CITY, LOT-6\nALOQA BANK",
@@ -1391,7 +1425,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Object:",
                     customerValue: "Lot-6 Aloqa Bank",
                     worksLabel: "Works:",
-                    worksValue: "Electrical installation, equipment supply."
+                    worksValue: "Electrical installation, equipment supply.",
+                    content: []
                 },
                 40: {
                     title: "TASHKENT CITY, LOT-6\nPSB BANK",
@@ -1400,7 +1435,8 @@ Total Area: 1996.32 m².`
                     customerLabel: "Object:",
                     customerValue: "Lot-6 PSB Bank",
                     worksLabel: "Works:",
-                    worksValue: "Engineering systems installation, commissioning."
+                    worksValue: "Engineering systems installation, commissioning.",
+                    content: []
                 },
                 41: {
                     title: "Key Figures of the Company",
@@ -1416,6 +1452,8 @@ Total Area: 1996.32 m².`
                 },
                 42: {
                     title: "CERTIFICATES",
+                    subtitle: "Our Licenses",
+                    content: [],  // Empty content to prevent raw key
                     style: "certificates",
                     license2: "License DE-2",
                     license3: "License DE-3",
@@ -1424,6 +1462,8 @@ Total Area: 1996.32 m².`
                 },
                 43: {
                     title: "WE LOOK FORWARD TO YOUR RESPONSE",
+                    subtitle: "Contact Us",
+                    content: [], // Empty content
                     style: "contact",
                     phone: "+998909177144",
                     website: "WWW.ENERCON.UZ",

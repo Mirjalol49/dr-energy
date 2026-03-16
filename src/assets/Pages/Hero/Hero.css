@@ -1,375 +1,85 @@
 .hero-section {
-  background-color: hsl(198, 67%, 13%);
-  padding: 40px 0;
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 60px;
   min-height: 90vh;
-  /* Reduced from 100vh to avoid overflow */
   display: flex;
   align-items: center;
-  position: relative;
-  margin-top: 40px;
-  /* Reduced from 60px */
   overflow: hidden;
-  /* Prevent content from spilling out */
+  background-color: #0f172a; /* tailwind slate-900 */
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  /* Prevent content from spilling out */
-}
-
-.hero-wrapper {
-  position: relative;
-  width: 100%;
-  padding: 60px 40px;
-  /* Reduced padding */
-  color: white;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-  transform: translateY(20px);
+.hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   background-image: url('../../images/bg.webp');
   background-size: cover;
-  background-position: center center;
-  background-blend-mode: overlay;
-  /* Blend the image with the overlay */
-  background-color: rgba(11, 41, 54, 0.3);
-  /* Slightly tint the image */
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  min-height: 500px;
-  /* Reduced from 600px */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Add a subtle zoom animation for extra flair on load, respects prefers-reduced-motion in jsx */
+  animation: slowZoom 20s linear infinite alternate;
 }
 
-.hero-wrapper::before {
-  content: '';
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-layer {
+    animation: none;
+  }
+}
+
+.hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* Significantly darker overlay to make image less visible */
-  background: linear-gradient(to right,
-      rgba(11, 41, 54, 0.95) 0%,
-      rgba(11, 41, 54, 0.3) 50%,
-      rgba(11, 41, 54, 0.1) 100%);
-  opacity: 0.9;
-  /* Additional opacity control */
-  pointer-events: none;
+  inset: 0;
+  z-index: 10;
+  background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.95) 0%, /* slate-900 */
+    rgba(15, 23, 42, 0.70) 50%,
+    rgba(15, 23, 42, 0.2) 100%
+  );
 }
 
-.hero-wrapper.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 50%;
-  padding-right: 0;
-}
-
-.hero-span {
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  opacity: 0;
-  transform: translateY(20px);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.hero-title {
-  font-size: 56px;
-  line-height: 1.2;
-  margin: 20px 0;
-  font-weight: 700;
-  opacity: 0;
-  transform: translateY(20px);
-  color: #fff;
-  /* Restoring white for non-brand text */
-  white-space: pre-line;
-  /* Allow newlines from translations */
-}
-
-.hero-subtext {
-  font-size: 25px;
-}
-
-/* BUTTON */
-.hero-btn {
-  width: auto;
-  min-width: 200px;
-  /* Reduced from 220px */
-  background-color: hsl(76, 97%, 65%);
-  color: hsl(198, 67%, 13%);
-  border: none;
-  border-radius: 35px;
-  margin-top: 25px;
-  /* Reduced from 35px */
-  padding: 16px 30px;
-  /* Reduced horizontal padding */
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 18px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-  transform: translateY(20px);
-  position: relative;
-  overflow: hidden;
-  letter-spacing: 0.8px;
-  box-shadow: 0 4px 15px rgba(206, 252, 79, 0.2);
-  text-transform: none;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  white-space: nowrap;
-  text-align: center;
-}
-
-.hero-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent);
-  transition: 0.5s;
-}
-
-.hero-btn:hover::before {
-  left: 100%;
-}
-
-.hero-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(206, 252, 79, 0.4);
-  background-color: hsl(76, 97%, 60%);
-}
-
-.hero-btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 10px rgba(206, 252, 79, 0.3);
-}
-
-/* Animation classes */
 .animate-slide-up {
-  animation: slideUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+  animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-.delay-200 {
-  animation-delay: 0.2s;
+.delay-200 { 
+  animation-delay: 0.1s; 
 }
 
-.delay-400 {
-  animation-delay: 0.4s;
+.delay-400 { 
+  animation-delay: 0.2s; 
 }
 
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Responsive styles */
-@media (max-width: 1024px) {
-  .hero-section {
-    padding: 60px 0 30px 0;
-    /* Reduced padding */
-    min-height: auto;
-  }
-
-  .hero-wrapper {
-    padding: 50px 30px;
-    min-height: 450px;
-  }
-
-  .hero-wrapper::before {
-    background: linear-gradient(to right,
-        rgba(11, 41, 54, 0.97) 0%,
-        rgba(11, 41, 54, 0.9) 70%,
-        rgba(11, 41, 54, 0.85) 100%);
-  }
-
-  .hero-title {
-    font-size: 36px;
-    /* Further reduced */
-  }
-
-  .hero-span {
-    font-size: 16px;
-  }
-
-  .hero-btn {
-    font-size: 17px;
-    padding: 14px 28px;
-  }
-
-  .hero-content {
-    max-width: 60%;
-  }
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
 }
 
 @media (max-width: 768px) {
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom right,
+      rgba(15, 23, 42, 0.95) 0%,
+      rgba(15, 23, 42, 0.85) 100%
+    );
+  }
   .hero-section {
-    padding: 50px 0 30px 0;
+    padding-top: 80px;
+    padding-bottom: 40px;
     min-height: auto;
-    margin-top: 30px;
   }
-
-  .hero-wrapper {
-    padding: 40px 25px;
-    min-height: 400px;
-  }
-
-  .hero-wrapper::before {
-    background: linear-gradient(to right,
-        rgba(11, 41, 54, 0.95) 0%,
-        rgba(11, 41, 54, 0.9) 50%,
-        rgba(11, 41, 54, 0.8) 100%);
-    opacity: 0.95;
-  }
-
-  .hero-title {
-    font-size: 30px;
-    margin: 15px 0;
-  }
-
-  .hero-span {
-    font-size: 15px;
-  }
-
-  .hero-btn {
-    font-size: 16px;
-    padding: 14px 24px;
-    min-width: 180px;
-    margin-top: 20px;
-  }
-
-  .hero-content {
-    max-width: 80%;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-section {
-    padding: 40px 0 25px 0;
-    margin-top: 25px;
-  }
-
-  .hero-wrapper {
-    padding: 35px 20px;
-    min-height: 350px;
-
-  }
-
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .hero-wrapper::before {
-    opacity: 0.98;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 30px 0 20px 0;
-    margin-top: 20px;
-  }
-
-  .hero-wrapper {
-    padding: 25px 15px;
-    border-radius: 15px;
-    min-height: 300px;
-    background-position: 85% center;
-  }
-
-  .hero-wrapper::before {
-    background: linear-gradient(to right,
-        rgba(11, 41, 54, 0.95) 0%,
-        rgba(11, 41, 54, 0.9) 50%,
-        rgba(11, 41, 54, 0.5) 100%);
-    opacity: 0.95;
-  }
-
-  .hero-title {
-    font-size: 24px;
-    margin: 12px 0;
-    line-height: 1.3;
-  }
-
-  .hero-span {
-    font-size: 13px;
-  }
-
-  .hero-btn {
-    font-size: 15px;
-    padding: 12px 20px;
-    min-width: 150px;
-    margin-top: 15px;
-    border-radius: 25px;
-  }
-
-  .container {
-    padding: 0 10px;
-  }
-}
-
-@media (max-width: 360px) {
-  .hero-section {
-    padding: 25px 0 15px 0;
-  }
-
-  .hero-wrapper {
-    padding: 20px 12px;
-    min-height: 280px;
-    border-radius: 12px;
-  }
-
-  .hero-title {
-    font-size: 20px;
-    margin: 10px 0;
-  }
-
-  .hero-span {
-    font-size: 12px;
-  }
-
-  .hero-btn {
-    font-size: 14px;
-    padding: 10px 18px;
-    min-width: 140px;
-    margin-top: 12px;
-  }
-}
-
-.brand-name {
-  display: inline-block;
-  color: hsl(76, 97%, 65%);
-  font-size: 1.1em;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  text-shadow: 0 0 20px rgba(206, 252, 79, 0.3);
 }

@@ -1,0 +1,396 @@
+/* VerticalPresentation.css */
+
+:root {
+    --apple-bg: #ffffff;
+    /* PURE WHITE as requested */
+    --apple-text: #1d1d1f;
+    --apple-text-secondary: #86868b;
+    --apple-blue: #0071e3;
+    --apple-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.vertical-presentation-container {
+    height: 100vh;
+    overflow-y: auto;
+    background-color: var(--apple-bg);
+    color: var(--apple-text);
+    font-family: var(--apple-font);
+    position: relative;
+    scroll-behavior: smooth;
+    z-index: 1000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Close Button - Apple Style */
+.close-pres-btn {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: rgba(240, 240, 240, 0.9);
+    color: #1d1d1f;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2000;
+    transition: all 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.close-pres-btn:hover {
+    background: #e8e8ed;
+    transform: scale(1.1);
+}
+
+/* Section Wrapper */
+.vertical-slide {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    background: var(--apple-bg);
+    border-bottom: 1px solid #f5f5f7;
+    /* Very subtle separation */
+}
+
+/* Slide Content Container */
+.slide-content {
+    max-width: 980px;
+    width: 88%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* HERO SLIDE */
+.vertical-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+    width: 100%;
+    background:
+        linear-gradient(135deg, rgba(245, 247, 250, 0.92) 0%, rgba(195, 207, 226, 0.88) 100%),
+        url('./hero_building_bw.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #1d1d1f;
+    position: relative;
+}
+
+.vertical-slide:first-child {
+    padding: 0;
+    background:
+        linear-gradient(135deg, rgba(245, 247, 250, 0.92) 0%, rgba(195, 207, 226, 0.88) 100%),
+        url('./hero_building_bw.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-title {
+    font-size: clamp(56px, 10vw, 110px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #1d1d1f 0%, #4a5568 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 28px;
+    font-weight: 500;
+    color: #4a5568;
+    max-width: 700px;
+}
+
+/* STANDARD TEXT CONTENT */
+.slide-logo {
+    height: 56px;
+    margin-bottom: 40px;
+    object-fit: contain;
+}
+
+.slide-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--apple-text);
+    margin-bottom: 12px;
+}
+
+.slide-subtitle {
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--apple-text-secondary);
+    margin-bottom: 48px;
+    margin-top: 0;
+}
+
+.slide-text p {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #1d1d1f;
+    margin-bottom: 1.5em;
+    max-width: 740px;
+}
+
+/* IMAGERY - Big, Bold, Clean */
+.slide-bg-container {
+    width: 100%;
+    height: 600px;
+    border-radius: 32px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+    position: relative;
+    background: #f0f0f0;
+}
+
+.slide-bg-img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.slide-bg-container:hover .slide-bg-img {
+    transform: scale(1.02);
+}
+
+
+/* CONTENT OBJECTS */
+.content-item-obj {
+    padding: 32px 0;
+    border-top: 1px solid #e5e5e5;
+    width: 100%;
+}
+
+.content-item-obj:first-child {
+    border-top: none;
+}
+
+.content-item-obj h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--apple-text);
+}
+
+.content-item-obj p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #424245;
+}
+
+.content-cat {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--apple-blue);
+    margin-top: 12px;
+    display: inline-block;
+    background: rgba(0, 113, 227, 0.1);
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* DOCUMENT LINKS - HUGE CARDS (User Request) */
+.documents-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    /* Center them if they don't fill the row */
+    gap: 24px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.content-doc-item {
+    background: #fbfbfd;
+    border: 1px solid #d2d2d7;
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    min-height: 200px;
+    /* Remove default styles */
+    margin-bottom: 0;
+}
+
+.content-doc-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--apple-blue);
+}
+
+.doc-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.doc-label {
+    font-weight: 600;
+    font-size: 20px;
+    color: #1d1d1f;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.doc-link {
+    color: #fff;
+    background: var(--apple-blue);
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.doc-link:hover {
+    background: #0077ed;
+    text-decoration: none;
+}
+
+
+/* GRIDS */
+.vertical-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.vertical-team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.gallery-item,
+.team-member {
+    border-radius: 24px;
+    overflow: hidden;
+    background: #f5f5f7;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    aspect-ratio: 4/3;
+}
+
+.gallery-item img,
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .slide-title {
+        font-size: 36px;
+    }
+
+    .hero-title {
+        font-size: 52px;
+    }
+
+    .slide-bg-container {
+        height: 300px;
+    }
+
+    .vertical-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* LIGHTBOX STYLES */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-image,
+.lightbox-video {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10001;
+    background: rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
