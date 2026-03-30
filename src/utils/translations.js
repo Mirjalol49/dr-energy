@@ -1456,6 +1456,7 @@ Total Area: 1996.32 m².`
                         4: { name: "Bobur Khalikov", role: "Site Engineer / Civil Engineer" },
                         5: { name: "Farkhod Abdurakhimov", role: "Safety Engineer" },
                         6: { name: "Jabir Khalikov", role: "Quality Manager / Documentator" },
+                        7: { name: "Sevara Tamilova", role: "H&R" }
                     }
                 },
                 42: {
@@ -2182,6 +2183,7 @@ Umumiy maydon: 1996.32 m².`
                         4: { name: "Bobur Xalikov", role: "Uchastka Muhandisi / Qurilish Muhandisi" },
                         5: { name: "Farxod Abduraximov", role: "Xavfsizlik Muhandisi" },
                         6: { name: "Jabir Xalikov", role: "Sifat Menejeri / Hujjatlashtiruvchi" },
+                        7: { name: "Sevara Tamilova", role: "H&R" }
                     }
                 },
                 42: {
@@ -2200,6 +2202,31 @@ Umumiy maydon: 1996.32 m².`
                     email: "INFO@ENERCON.UZ\nenergo_07@yahoo.com"
                 }
             }
+        },
+        contact: {
+            title: "Biz bilan bog'laning",
+            connect: "Keling, suhbatlashamiz",
+            desc: "Savolingiz bormi yoki loyihani muhokama qilmoqchimisiz? Bizga xabar yuboring va imkon qadar tezroq siz bilan bog'lanamiz.",
+            email: "Elektron pochta",
+            emailPh: "Emailingizni kiriting",
+            message: "Xabar",
+            messagePh: "Xabaringizni shu yerga yozing",
+            send: "Xabarni yuborish",
+            sending: "Yuborilmoqda..."
+        },
+        footer: {
+            description: "Barqaror kelajak uchun uylar va korxonalarni innovatsion energiya yechimlari bilan ta'minlash.",
+            quickLinks: "Tezkor havolalar",
+            contactInfo: "Aloqa ma'lumotlari",
+            businessHours: "Ish vaqti",
+            addr: "8-53 Chilonzor, Toshkent, O'zbekiston",
+            monFri: "Dushanba - Juma",
+            sat: "Shanba:",
+            sun: "Yakshanba:",
+            closed: "Yopiq",
+            privacy: "Maxfiylik siyosati",
+            terms: "Foydalanish shartlari",
+            rights: "Barcha huquqlar himoyalangan."
         }
     }
 };

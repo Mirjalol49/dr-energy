@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
-import { Sun, Cloud, CloudRain, CloudSnow, CloudLightning, Bitcoin, DollarSign, Euro, PoundSterling } from 'lucide-react';
+import { Sun, Cloud, CloudRain, CloudSnow, CloudLightning, Bitcoin, DollarSign, Euro, PoundSterling, Coins } from 'lucide-react';
 
 const TopBar = () => {
     const [weather, setWeather] = useState(null);
@@ -8,7 +8,8 @@ const TopBar = () => {
         USD_UZS: null,
         USD_RUB: null,
         GBP_USD: null,
-        BTC_USD: null
+        BTC_USD: null,
+        GOLD_UZS: null
     });
     const [loading, setLoading] = useState(true);
 
@@ -25,16 +26,23 @@ const TopBar = () => {
                 const currencyRes = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
                 const currencyData = await currencyRes.json();
 
-                // Fetch Crypto (Bitcoin) from CoinGecko
-                const cryptoRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+                // Fetch Crypto and Gold (PAX Gold) from CoinGecko
+                const cryptoRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,pax-gold&vs_currencies=usd');
                 const cryptoData = await cryptoRes.json();
                 const btcPrice = cryptoData.bitcoin?.usd;
+                const paxGoldUsd = cryptoData['pax-gold']?.usd;
+
+                // Calculate 1 gram of gold in UZS
+                // 1 Troy Ounce = 31.1034768 grams
+                const goldGramUsd = paxGoldUsd ? paxGoldUsd / 31.1034768 : null;
+                const goldGramUzs = goldGramUsd && currencyData.rates.UZS ? goldGramUsd * currencyData.rates.UZS : null;
 
                 setRates({
                     USD_UZS: currencyData.rates.UZS,
                     USD_RUB: currencyData.rates.RUB,
                     GBP_USD: 1 / currencyData.rates.GBP,
-                    BTC_USD: btcPrice
+                    BTC_USD: btcPrice,
+                    GOLD_UZS: goldGramUzs
                 });
 
                 setLoading(false);
@@ -97,6 +105,16 @@ const TopBar = () => {
                         <span className="currency-value">{rates.GBP_USD?.toFixed(2)}</span>
                     </div>
                     <div className="divider">|</div>
+                    {rates.GOLD_UZS && (
+                        <>
+                            <div className="currency-item" style={{ color: '#FCD34D' }}>
+                                <Coins size={14} className="currency-icon" />
+                                <span className="currency-pair">1g Gold</span>
+                                <span className="currency-value">{rates.GOLD_UZS.toLocaleString('en-US', { maximumFractionDigits: 0 })} UZS</span>
+                            </div>
+                            <div className="divider">|</div>
+                        </>
+                    )}
                     {rates.BTC_USD && (
                         <div className="currency-item highlight-btc">
                             <Bitcoin size={14} className="currency-icon btc-icon" />
